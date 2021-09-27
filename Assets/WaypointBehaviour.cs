@@ -22,7 +22,9 @@ public class WaypointBehaviour : MonoBehaviour
 
         float distance = Vector3.Distance(gameObject.transform.position, targetTransform.position);
 
-        if(distance < 0.05f)
+        Debug.Log(distance);
+
+        if(distance < 0.15f)
         {
             if (currentName.Equals("Waypoint1"))
             {

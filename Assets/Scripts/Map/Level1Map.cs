@@ -23,7 +23,7 @@ public class Level1Map : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("CreateSlime", 1f, 3f);
+        InvokeRepeating("CreateMonster", 1f, 5f);
     }
 
     void Update()
@@ -31,11 +31,9 @@ public class Level1Map : MonoBehaviour
         
     }
 
-    private void CreateSlime()
+    private void CreateMonster()
     {
         this.smf.Spawn(parent.transform, respawnPoint.localPosition);
-
-        Debug.Log(GameManager.Instance.playTime);
 
         if (GameManager.Instance.playTime >= 100f)
             CancelInvoke("CreateSlime");
