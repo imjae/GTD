@@ -1,3 +1,4 @@
+using UnityEngine;
 public enum MonsterType
 {
     Slime,
@@ -12,14 +13,13 @@ public enum MonsterType
     Golem
 }
 
-abstract class Monster
+public abstract class Monster : MonoBehaviour
 {
-    protected MonsterType type;
-    protected string name;
-    protected int hp;
-    protected int damage;
+    public MonsterType type;
+    public int hp;
+    public int damage;
 
-    protected float moveSpeed;
+    public float moveSpeed;
     public abstract void Move();
     public abstract void Die();
 }

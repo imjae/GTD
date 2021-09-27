@@ -1,11 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Slime : Monster
+public class Skeleton : Monster
 {
-    public Slime()
+    public Skeleton()
     {
-        type = MonsterType.Slime;
-        hp = 100;
+        type = MonsterType.Skeleton;
+        hp = 200;
         damage = 10;
 
         moveSpeed = 0.1f;
@@ -16,6 +18,6 @@ public class Slime : Monster
     }
     public override void Die()
     {
-        
+
     }
 }
