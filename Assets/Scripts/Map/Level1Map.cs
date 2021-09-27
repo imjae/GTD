@@ -35,14 +35,17 @@ public class Level1Map : MonoBehaviour
 
     private void CreateMonster()
     {
+        // 리스폰된 전체 몬스터수 증가
 
         if (GameManager.Instance.playTime <= 10f)
         {
             this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            GameManager.Instance.currentMonsterCount++;
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
             this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            GameManager.Instance.currentMonsterCount++;
         }
     }
 }
