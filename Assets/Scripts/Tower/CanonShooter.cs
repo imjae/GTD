@@ -8,6 +8,8 @@ public class CanonShooter : MonoBehaviour
     public GameObject bullet;
     public AudioClip[] audioClip;
     AudioSource audioSource;
+    Animator animator;
+    ParticleSystem particle;
     float playTime = 0f;
 
     Vector3 target;
@@ -15,6 +17,8 @@ public class CanonShooter : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponentInParent<Animator>();
+        particle = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -30,21 +34,24 @@ public class CanonShooter : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(playTime % 2 == 0)
+        if (other.gameObject.CompareTag("Target"))
         {
-            if (other.gameObject.CompareTag("Target"))
+            Debug.Log("Lock On");
+            if (playTime % 1.5 == 0)
             {
                 target = other.gameObject.transform.position;
-                Debug.Log("Target On");
-                transform.LookAt(other.transform);
                 CanonShoot();
             }
         }
+
     }
 
     void CanonShoot()
     {
+        Debug.Log("Attack");
         audioSource.PlayOneShot(audioClip[0]);
+        animator.Play("CanonTower", -1, 0f);
+        particle.Play();
         GameObject tmpBullet = Instantiate(bullet, transform.position, transform.rotation);
         tmpBullet.GetComponent<CanonBullet>().target = this.target;
     }
