@@ -161,9 +161,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167648482129316}
+  - component: {fileID: 5406686479767238525}
+  - component: {fileID: 5996615494119643946}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +187,35 @@ Transform:
   m_Father: {fileID: 4333204578251230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5406686479767238525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072258877310496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6927955, y: 0.86943686, z: 1}
+  m_Center: {x: -0.4249624, y: -0.06528194, z: -0.0000000029314458}
+--- !u!54 &5996615494119643946
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072258877310496}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1072944794187276
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +257,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4333204578251230}
   - component: {fileID: 95570523499675550}
+  - component: {fileID: 1235818967999916680}
+  - component: {fileID: 7675376198909878726}
   m_Layer: 0
   m_Name: SkeletonPBR
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 1088474434442572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4167648482129316}
   - {fileID: 4350418880833688}
@@ -270,6 +303,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1235818967999916680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088474434442572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82904a808d9903b4e9fb581db75c201d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  hp: 200
+  damage: 10
+  moveSpeed: 0.3
+--- !u!114 &7675376198909878726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088474434442572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c579be5487aaad44b5954899c96f331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109665426179172
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,12 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-class Level1Map : Map
+public class Level1Map : MonoBehaviour
 {
-    public Level1Map()
+    public GameObject slime;
+    public Transform respawnPoint;
+
+    public GameObject parent;
+
+    [SerializeField] 
+    private SlimeMonsterFactory slimeFactory = null;
+    [SerializeField]
+    private SkeletonMonsterFactory skeletonFactory = null;
+
+    public Vector3[] wayPoint = new Vector3[]{
+        new Vector3(45f, -0.5f, -26.89f),
+        new Vector3(45f, -0.5f, -56.89f),
+        new Vector3(-75f, -0.5f, -56.89f),
+        new Vector3(-75f, -0.5f, 3.1f),
+        new Vector3(45f, -0.5f, -26.89f)
+    };
+
+
+    void Start()
     {
-        type = MapType.Level1;
-        name = "level1";
-        respawnPoint = new Vector3(55f, -0.5f, -26.89f);
-        wayPoint = new Vector3[4];
+        InvokeRepeating("CreateMonster", 1f, 1.5f);
+    }
+
+    void Update()
+    {
+        
+    }
+
+    private void CreateMonster()
+    {
+
+        if (GameManager.Instance.playTime <= 10f)
+        {
+            this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
+        } 
+        else if (GameManager.Instance.playTime <= 20f)
+        {
+            this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
+        }
     }
 }
