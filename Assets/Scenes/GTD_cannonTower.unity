@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4497102, g: 0.49977922, b: 0.57563627, a: 1}
+  m_IndirectSpecularColor: {r: 0.44971025, g: 0.4997797, b: 0.5756367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5437,7 +5437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710174170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.53, y: 2.086905, z: 66.15}
+  m_LocalPosition: {x: 12.3, y: 2.086905, z: 66.15}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18700,7 +18700,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3082559384019337928, guid: 75301f8e979f208499620b95b504f4f9, type: 3}
       propertyPath: m_Name
-      value: TB_CanonTower_Lvl1_Ball
+      value: CanonBullet
       objectReference: {fileID: 0}
     - target: {fileID: 3084221107775486780, guid: 75301f8e979f208499620b95b504f4f9, type: 3}
       propertyPath: m_RootOrder
@@ -18755,14 +18755,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 466513633570536730, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320510448260063259, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
       propertyPath: m_Name
       value: CanonTower
