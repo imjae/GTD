@@ -294,8 +294,9 @@ GameObject:
   - component: {fileID: 472941151}
   - component: {fileID: 472941153}
   - component: {fileID: 472941152}
+  - component: {fileID: 472941154}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MonsterCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,6 +418,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472941150}
   m_CullTransparentMesh: 1
+--- !u!114 &472941154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472941150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71f671d55e91944c8816e5e8b4daa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575236537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7569437366751024037, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
@@ -587,6 +600,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1621033238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621033239}
+  - component: {fileID: 1621033240}
+  m_Layer: 0
+  m_Name: OrcMonsterFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621033239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621033238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026420989}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621033240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621033238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75965d4bc87ed694fac8133659eb665c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orcPrefab: {fileID: 1765397208479606, guid: 3e08eaa99fbf41647adc835cdda0472a, type: 3}
 --- !u!1 &1817210315
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +721,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1213703267, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
+      propertyPath: orcFactory
+      value: 
+      objectReference: {fileID: 1621033240}
     - target: {fileID: 1213703267, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
       propertyPath: slimeFactory
       value: 
