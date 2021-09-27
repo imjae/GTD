@@ -1,15 +1,14 @@
 using UnityEngine;
 
-class Slime : Monster
+public class Slime : Monster
 {
     public Slime()
     {
         type = MonsterType.Slime;
-        name = "Slime";
         hp = 100;
         damage = 10;
 
-        Debug.Log(this.name + " »ý¼º");
+        moveSpeed = 0.1f;
     }
 
     public override void Move()
