@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
+  - Target
+  - Bullet
+  - Ground
   - Waypoint1
   - Waypoint2
   - Waypoint3
