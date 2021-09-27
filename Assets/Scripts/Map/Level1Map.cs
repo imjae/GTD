@@ -15,6 +15,10 @@ public class Level1Map : MonoBehaviour
     private SkeletonMonsterFactory skeletonFactory = null;
     [SerializeField]
     private OrcMonsterFactory orcFactory = null;
+    [SerializeField]
+    private GolemMonsterFactory golemFactory = null;
+    [SerializeField]
+    private DragonMonsterFactory dragonFactory = null;
 
     public Vector3[] wayPoint = new Vector3[]{
         new Vector3(45f, -0.5f, -26.89f),
@@ -52,6 +56,16 @@ public class Level1Map : MonoBehaviour
         else if (GameManager.Instance.playTime <= 30f)
         {
             this.orcFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            GameManager.Instance.currentMonsterCount++;
+        }
+        else if (GameManager.Instance.playTime <= 40f)
+        {
+            this.golemFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            GameManager.Instance.currentMonsterCount++;
+        }
+        else if (GameManager.Instance.playTime <= 50f)
+        {
+            this.dragonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
     }
