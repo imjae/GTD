@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaypointBehaviour : MonoBehaviour
 {
     string currentName;
+    float distance;
 
     private void Start()
     {
@@ -20,9 +21,7 @@ public class WaypointBehaviour : MonoBehaviour
         GameObject targetObject = targetBodyTransform.parent.gameObject;
         Transform targetTransform = targetObject.transform;
 
-        float distance = Vector3.Distance(gameObject.transform.position, targetTransform.position);
-
-        Debug.Log(distance);
+        distance = Vector3.Distance(gameObject.transform.position, targetTransform.position);
 
         if(distance < 0.15f)
         {
