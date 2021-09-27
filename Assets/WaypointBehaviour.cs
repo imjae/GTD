@@ -32,26 +32,31 @@ public class WaypointBehaviour : MonoBehaviour
                 {
                     // Debug.Log("waypoint1 통과");
                     targetTransform.localRotation = Quaternion.Euler(0f, -180f, 0f);
+                    targetTransform.Find("Canvas").localRotation = Quaternion.Euler(0f, 0f, 0f);
                 }
                 else if (currentName.Equals("Waypoint2"))
                 {
                     // Debug.Log("waypoint2 통과");
-                    targetTransform.localRotation = Quaternion.Euler(0f, -90f, 0f); ;
+                    targetTransform.localRotation = Quaternion.Euler(0f, -90f, 0f);
+                    targetTransform.Find("Canvas").localRotation = Quaternion.Euler(0f, -90f, 0f);
                 }
                 else if (currentName.Equals("Waypoint3"))
                 {
                     // Debug.Log("waypoint3 통과");
                     targetTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    targetTransform.Find("Canvas").localRotation = Quaternion.Euler(0f, 0f, 0f);
                 }
                 else if (currentName.Equals("Waypoint4"))
                 {
                     // Debug.Log("waypoint4 통과");
                     targetTransform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+                    targetTransform.Find("Canvas").localRotation = Quaternion.Euler(0f, -90f, 0f);
                 }
                 else if (currentName.Equals("Waypoint5"))
                 {
                     // Debug.Log("waypoint5 통과");
                     targetTransform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+                    targetTransform.Find("Canvas").localRotation = Quaternion.Euler(0f, 0f, 0f);
                 }
             }
         }
