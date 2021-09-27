@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 940112864}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   type: 0
   hp: 100
   damage: 10
-  moveSpeed: 0.1
+  moveSpeed: 0.5
 --- !u!114 &8520187757578024485
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     // 게임 정지 여부
     public bool isPause = true;
     // 게임 경과 시간
-    public float playTime = 0.0f;
+    public float playTime;
 
     // 현재 난이도
     public int currentDifficuty = 1;
@@ -57,12 +57,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        playTime = Time.time;
+        
     }
 
     private void FixedUpdate()
     {
-        
+        playTime = Time.time;
     }
 
     void Update()

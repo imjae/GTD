@@ -23,11 +23,21 @@ public class Level1Map : MonoBehaviour
 
     void Start()
     {
-        this.smf.Spawn(parent.transform, respawnPoint.localPosition);
+        InvokeRepeating("CreateSlime", 1f, 3f);
     }
 
     void Update()
     {
         
+    }
+
+    private void CreateSlime()
+    {
+        this.smf.Spawn(parent.transform, respawnPoint.localPosition);
+
+        Debug.Log(GameManager.Instance.playTime);
+
+        if (GameManager.Instance.playTime >= 100f)
+            CancelInvoke("CreateSlime");
     }
 }
