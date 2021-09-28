@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Regenerate: 0
   regen: 0.1
-  isDecrease: 1
+  isDecrease: 0
   decreaseHealth: 10
   regenUpdateInterval: 0.5
   GodMode: 0
