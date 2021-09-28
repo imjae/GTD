@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4497102, g: 0.49977922, b: 0.57563627, a: 1}
+  m_IndirectSpecularColor: {r: 0.44971025, g: 0.4997797, b: 0.5756367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3947,7 +3947,7 @@ GameObject:
   - component: {fileID: 1561868511}
   - component: {fileID: 1561868510}
   - component: {fileID: 1561868509}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +4938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944201018}
   m_LocalRotation: {x: -0.46174863, y: -0, z: -0, w: 0.8870109}
-  m_LocalPosition: {x: -11.734283, y: -10.140144, z: 94.9326}
+  m_LocalPosition: {x: -70.5, y: -59, z: 60.7}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children:
   - {fileID: 475161487}
