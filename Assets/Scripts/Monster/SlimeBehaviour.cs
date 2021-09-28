@@ -7,7 +7,6 @@ public class SlimeBehaviour : MonoBehaviour
     private Slime slime;
     private Transform slimeTransform;
 
-
     // Start is called before the first frame update
     void Start()
     {

@@ -718,11 +718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 100
-  maxHitPoint: 100
   Regenerate: 0
   regen: 0.1
-  isDecrease: 0
-  decreaseHealth: 1
-  regenUpdateInterval: 1
+  isDecrease: 1
+  decreaseHealth: 10
+  regenUpdateInterval: 0.5
   GodMode: 0
