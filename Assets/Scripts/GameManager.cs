@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     // 게임오버 기준 몬스터수
     public int monsterGameoverCount = 100;
     // 몬스터 생성 간격 시간
-    public float generatedMonsterTime = 0.0f;
+    public float monsterRespawnTime = 1.5f;
 
 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
