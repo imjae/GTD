@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+    public GameObject TowerSpwanEffect;
+
+    private ParticleSystem spawnPaticle;
+
+    private GameObject select;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        select = Instantiate(TowerSpwanEffect);
     }
 
     // Update is called once per frame
@@ -20,30 +26,9 @@ public class MouseManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit))
             {
                 GameObject target = hit.transform.gameObject;
-                float curX = target.transform.position.x;
-                float curY = target.transform.position.y;
-                float curZ = target.transform.position.z;
-
-                target.transform.position = new Vector3(curX, curY - 3f, curZ);
-            }
-        } else if(Input.GetMouseButtonUp(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject target = hit.transform.gameObject;
-                float curX = target.transform.position.x;
-                float curY = target.transform.position.y;
-                float curZ = target.transform.position.z;
-
-                target.transform.position = new Vector3(curX, curY + 3f, curZ);
+                Transform targetTransform = target.transform;
+                select.transform.position = new Vector3(targetTransform.position.x, targetTransform.position.y + 1.5f, targetTransform.position.z);
             }
         }
-    }
-
-    private void OnMouseOver()
-    {
-        
     }
 }
