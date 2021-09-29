@@ -15,6 +15,7 @@ TagManager:
   - Waypoint5
   - Load
   - TowerGround
+  - Tower
   layers:
   - Default
   - TransparentFX

@@ -110,4 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   damage: 30
-  rate: 30
+  rate: 60
