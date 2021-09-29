@@ -28,7 +28,7 @@ public class WaypointBehaviour : MonoBehaviour
 
             distance = Vector3.Distance(gameObject.transform.position, targetTransform.position);
 
-            if (distance < 0.1f)
+            if (distance < 0.2f)
             {
                 if (currentName.Equals("Waypoint1"))
                 {
