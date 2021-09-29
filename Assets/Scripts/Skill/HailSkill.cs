@@ -9,6 +9,8 @@ public class HailSkill : Skill
         type = SkillType.Hail;
         damage = 50;
         rate = 60;
+        duration = 5;
+        speed = 0.5f;
     }
 
     public override void Use()
