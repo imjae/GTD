@@ -1369,7 +1369,7 @@ GameObject:
   - component: {fileID: 4191744185429214}
   - component: {fileID: 95246818704427922}
   - component: {fileID: 8714353196771919663}
-  - component: {fileID: 761353729168873181}
+  - component: {fileID: 5509312122735401996}
   m_Layer: 7
   m_Name: GolemPBR
   m_TagString: Monster
@@ -1428,8 +1428,9 @@ MonoBehaviour:
   type: 9
   hp: 400
   damage: 10
+  dropGold: 400
   moveSpeed: 0.2
---- !u!114 &761353729168873181
+--- !u!114 &5509312122735401996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1438,7 +1439,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1706760125350986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b6d3ca02008d74696c6a3fb640ae9e, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f769d6df9487f44bfbd88c03136c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1713691074708414
@@ -2190,6 +2191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoint: 0
+  maxHitPoint: 0
   Regenerate: 0
   regen: 0.1
   isDecrease: 0

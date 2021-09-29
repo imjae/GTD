@@ -18,14 +18,16 @@ public class HealthSystem : MonoBehaviour
 	//==============================================================
 	// Regenerate Health & Mana
 	//==============================================================
+
+	public float hitPoint = 0.0f;
+	public float maxHitPoint = 0.0f;
+
 	public bool Regenerate = true;
 	public float regen = 0.1f;
 
 	public bool isDecrease = true;
 	public float decreaseHealth = 0.1f;
 
-	private float hitPoint = 0.0f;
-	private float maxHitPoint = 0.0f;
 	private float timeleft = 0.0f;  // Left time for current interval
 	
 	public float regenUpdateInterval = 1f;

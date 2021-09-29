@@ -633,7 +633,7 @@ MonoBehaviour:
   currentGold: 0
   currentMonsterCount: 0
   monsterGameoverCount: 100
-  monsterRespawnTime: 0.5
+  monsterRespawnTime: 3
 --- !u!4 &1365553021
 Transform:
   m_ObjectHideFlags: 0

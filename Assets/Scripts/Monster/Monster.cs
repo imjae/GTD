@@ -18,8 +18,7 @@ public abstract class Monster : MonoBehaviour
     public MonsterType type;
     public int hp;
     public int damage;
+    public int dropGold;
 
     public float moveSpeed;
-    public abstract void Move();
-    public abstract void Die();
 }

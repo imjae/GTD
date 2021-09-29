@@ -12,7 +12,6 @@ public abstract class MonsterFactory : MonoBehaviour
         // 매개변수로 받는 transform을 부모로 설정
         monster.transform.SetParent(parent, false);
         monster.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
-        // 구분을 위해 랜덤한 위치에 생성
         monster.transform.localPosition = spawnPoint;
 
         return monster;
