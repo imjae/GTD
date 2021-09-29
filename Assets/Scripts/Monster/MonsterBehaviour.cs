@@ -30,6 +30,7 @@ public class MonsterBehaviour : MonoBehaviour
         {
             isDie = true;
             animator.SetTrigger("DieTrigger");
+            GameManager.Instance.currentMonsterCount--;
         }
     }
 
@@ -41,6 +42,7 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void MonsterDestroy()
     {
+
         Destroy(gameObject);
     }
 }
