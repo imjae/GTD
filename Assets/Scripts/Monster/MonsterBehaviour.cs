@@ -62,7 +62,6 @@ public class MonsterBehaviour : MonoBehaviour
                 {
 
                     transform.LookAt(currentMap.GetComponent<Level1Map>().wayPoint[0].transform);
-                    animator.SetTrigger("RunTrigger");
                     isFirstWayPoint = false;
                 }
                 monsterTransform.Translate(Vector3.forward * monster.moveSpeed);
@@ -85,7 +84,8 @@ public class MonsterBehaviour : MonoBehaviour
     void triggerTouchStartTile()
     {
         animator.SetTrigger("WalkTrigger");
-        this.isTouchStartTile = !this.isTouchStartTile;
+        // 처음 시작 타일을 밟았다는 표시
+        this.isTouchStartTile = true;
     }
 
     public void MonsterDestroy()

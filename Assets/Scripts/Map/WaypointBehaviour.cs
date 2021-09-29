@@ -30,6 +30,7 @@ public class WaypointBehaviour : MonoBehaviour
 
             if (distance < 0.2f)
             {
+                targetObject.GetComponent<Animator>().SetTrigger("RunTrigger");
                 if (currentName.Equals("Waypoint1"))
                 {
                     targetTransform.LookAt(wayPoint[1].transform);
