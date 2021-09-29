@@ -157,7 +157,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 25
+  m_Radius: 40
   m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &6578204981578200062
 GameObject:
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 8125298472236082915}
   m_Layer: 0
   m_Name: CanonTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
