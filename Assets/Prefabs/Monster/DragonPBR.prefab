@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 4258366756040210}
   - component: {fileID: 95336232578254584}
   - component: {fileID: 495870651980149803}
-  - component: {fileID: -1478967521624149603}
+  - component: {fileID: 3163880321157611912}
   m_Layer: 7
   m_Name: DragonPBR
   m_TagString: Monster
@@ -872,8 +872,9 @@ MonoBehaviour:
   type: 6
   hp: 1000
   damage: 10
+  dropGold: 500
   moveSpeed: 0.2
---- !u!114 &-1478967521624149603
+--- !u!114 &3163880321157611912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -882,7 +883,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1594767147126006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edaee82109f3e8e4680ededff624c2ef, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f769d6df9487f44bfbd88c03136c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1610864841334552
@@ -1738,6 +1739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoint: 0
+  maxHitPoint: 0
   Regenerate: 0
   regen: 0.1
   isDecrease: 0

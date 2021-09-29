@@ -20,8 +20,7 @@ public class MonsterCollision : MonoBehaviour
 
         if (targetTag.Equals("Bullet"))
         {
-            Debug.Log("¿Ö ¾È¶° !");
-            healthSystem.TakeDamage(50);
+            healthSystem.TakeDamage(1000);
         }
         else if (targetTag.Equals("Arrow"))
         {

@@ -7,15 +7,7 @@ public class Slime : Monster
         type = MonsterType.Slime;
         hp = 100;
         damage = 10;
-
+        dropGold = 100;
         moveSpeed = 0.1f;
-    }
-
-    public override void Move()
-    {
-    }
-    public override void Die()
-    {
-        
     }
 }
