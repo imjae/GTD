@@ -13,6 +13,8 @@ TagManager:
   - Waypoint3
   - Waypoint4
   - Waypoint5
+  - Load
+  - TowerGround
   layers:
   - Default
   - TransparentFX
