@@ -30,6 +30,7 @@ public class MonsterBehaviour : MonoBehaviour
         {
             isDie = true;
             animator.SetTrigger("DieTrigger");
+            GameManager.Instance.currentGold += monster.dropGold;
             GameManager.Instance.currentMonsterCount--;
         }
     }
