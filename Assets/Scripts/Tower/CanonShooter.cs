@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CanonShooter : MonoBehaviour
+{
+    public float shootRate = 3;
+    public GameObject bullet;
+    public AudioClip[] audioClip;
+    AudioSource audioSource;
+    Animator animator;
+    ParticleSystem particle;
+    float playTime = 0f;
+
+    Vector3 target;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        animator = GetComponentInParent<Animator>();
+        particle = GetComponentInChildren<ParticleSystem>();
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+            CanonShoot();
+    }
+
+    private void FixedUpdate()
+    {
+        playTime = Time.time;
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Target"))
+        {
+            Debug.Log("Lock On");
+            if (playTime % 1.5 == 0)
+            {
+                target = other.gameObject.transform.position;
+                CanonShoot();
+            }
+        }
+
+    }
+
+    void CanonShoot()
+    {
+        Debug.Log("Attack");
+        audioSource.PlayOneShot(audioClip[0]);
+        animator.Play("CanonTower", -1, 0f);
+        particle.Play();
+        GameObject tmpBullet = Instantiate(bullet, transform.position, transform.rotation);
+        tmpBullet.GetComponent<CanonBullet>().target = this.target;
+    }
+}
