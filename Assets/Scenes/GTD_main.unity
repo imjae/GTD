@@ -794,7 +794,7 @@ MonoBehaviour:
   currentGold: 0
   currentMonsterCount: 0
   monsterGameoverCount: 100
-  monsterRespawnTime: 3
+  monsterRespawnTime: 8
 --- !u!4 &1365553021
 Transform:
   m_ObjectHideFlags: 0
@@ -898,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 3499686920948133527, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
       propertyPath: m_Name
       value: Level1Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567974518315423961, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 76.71
       objectReference: {fileID: 0}
     - target: {fileID: 8419098605552509419, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
       propertyPath: m_RootOrder
