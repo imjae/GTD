@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Level1Map : MonoBehaviour
 {
-    public GameObject slime;
     public Transform respawnPoint;
 
     public GameObject parent;
@@ -20,14 +19,7 @@ public class Level1Map : MonoBehaviour
     [SerializeField]
     private DragonMonsterFactory dragonFactory = null;
 
-    public Vector3[] wayPoint = new Vector3[]{
-        new Vector3(45f, -0.5f, -26.89f),
-        new Vector3(45f, -0.5f, -56.89f),
-        new Vector3(-75f, -0.5f, -56.89f),
-        new Vector3(-75f, -0.5f, 3.1f),
-        new Vector3(45f, -0.5f, -26.89f)
-    };
-
+    public GameObject[] wayPoint;
 
     void Start()
     {
@@ -63,10 +55,11 @@ public class Level1Map : MonoBehaviour
             this.golemFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
-        else if (GameManager.Instance.playTime <= 50f)
+        // 드래곤 보스몹 출현 애니메이션으로 변경할 예정
+        /*else if (GameManager.Instance.playTime <= 50f)
         {
             this.dragonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
-        }
+        }*/
     }
 }

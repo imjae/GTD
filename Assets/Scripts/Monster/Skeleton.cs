@@ -9,15 +9,7 @@ public class Skeleton : Monster
         type = MonsterType.Skeleton;
         hp = 200;
         damage = 10;
-
+        dropGold = 200;
         moveSpeed = 0.1f;
-    }
-
-    public override void Move()
-    {
-    }
-    public override void Die()
-    {
-
     }
 }

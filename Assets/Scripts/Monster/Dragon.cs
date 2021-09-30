@@ -9,15 +9,7 @@ public class Dragon : Monster
         type = MonsterType.Dragon;
         hp = 1000;
         damage = 10;
-
+        dropGold = 500;
         moveSpeed = 0.2f;
-    }
-
-    public override void Move()
-    {
-    }
-    public override void Die()
-    {
-
     }
 }

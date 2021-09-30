@@ -272,7 +272,9 @@ GameObject:
   - component: {fileID: 4333204578251230}
   - component: {fileID: 95570523499675550}
   - component: {fileID: 1235818967999916680}
-  - component: {fileID: 7675376198909878726}
+  - component: {fileID: 8965200717208864235}
+  - component: {fileID: 7629326757786977006}
+  - component: {fileID: 1409157119602209100}
   m_Layer: 7
   m_Name: SkeletonPBR
   m_TagString: Monster
@@ -333,8 +335,9 @@ MonoBehaviour:
   type: 5
   hp: 200
   damage: 10
+  dropGold: 200
   moveSpeed: 0.3
---- !u!114 &7675376198909878726
+--- !u!114 &8965200717208864235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,9 +346,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1088474434442572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c579be5487aaad44b5954899c96f331, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f769d6df9487f44bfbd88c03136c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7629326757786977006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088474434442572}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &1409157119602209100
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088474434442572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7362822, z: 1}
+  m_Center: {x: 0, y: 0.8165993, z: 0}
 --- !u!1 &1109665426179172
 GameObject:
   m_ObjectHideFlags: 0
