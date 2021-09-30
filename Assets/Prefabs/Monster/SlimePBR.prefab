@@ -151,7 +151,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240222798952858}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5818437
@@ -459,8 +459,6 @@ GameObject:
   - component: {fileID: 95457531584545886}
   - component: {fileID: 6331195640430055812}
   - component: {fileID: 8520187757578024485}
-  - component: {fileID: 7622348996726015509}
-  - component: {fileID: 3560164336949910330}
   m_Layer: 7
   m_Name: SlimePBR
   m_TagString: Monster
@@ -519,8 +517,7 @@ MonoBehaviour:
   type: 0
   hp: 100
   damage: 10
-  dropGold: 100
-  moveSpeed: 0.2
+  moveSpeed: 0.3
 --- !u!114 &8520187757578024485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,35 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f769d6df9487f44bfbd88c03136c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &7622348996726015509
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931298151966786}
-  serializedVersion: 2
-  m_Mass: 2
-  m_Drag: 1
-  m_AngularDrag: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
---- !u!65 &3560164336949910330
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931298151966786}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.1580563, z: 1}
-  m_Center: {x: 0, y: 0.5917485, z: 0}
 --- !u!1 &4601890711381936869
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,8 +718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 0
-  maxHitPoint: 0
   Regenerate: 0
   regen: 0.1
   isDecrease: 0

@@ -3,60 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 스킬버튼을 눌렀을 때의 동작을 관장하는 스크립트
-
 public class ButtonActor : MonoBehaviour
 {
-    Image image;
-    Button button;
-    public GameObject skill;
-    float coolTime;
-    float leftTime;
-    float fillRatio;
+    public Image image;
+    public Button button;
+    public float coolTime = 10f;
+    public bool isClicked = false;
+    float leftTime = 10f;
+    float speed = 5f;
 
     void Start()
     {
-        image = GetComponent<Image>();
         button = GetComponent<Button>();
-        coolTime = skill.GetComponent<Skill>().rate;
-        button.onClick.AddListener(UseSkill);
+        //button.onClick.AddListener(ClickButton);
     }
 
-    void UseSkill()
+    void Update()
     {
-        Debug.Log(gameObject.name + " 사용");
-        leftTime = coolTime;
-        button.enabled = false;
-        transform.localScale /= 1.2f;
-        image.color = new Color(1f, 1f, 1f, 0.8f);
-        StartCoroutine(CoolTime());
-    }
-
-    IEnumerator CoolTime()
-    {
-        Debug.Log("Cooling");
-        while (true)
+        if (isClicked)
         {
-            leftTime -= Time.deltaTime;
-            fillRatio = 1f - (leftTime / coolTime);
-            image.fillAmount = fillRatio;
-            Debug.Log(gameObject.name + ": 쿨타임 " + (int)leftTime + "초");
-            yield return null;
-
-            if (leftTime <= 0)
+            if (leftTime > 0)
             {
-                leftTime = 0;
-                Cooled();
-                yield break;
+                leftTime -= Time.deltaTime * speed;
+                if (leftTime < 0)
+                {
+                    leftTime = 0;
+                    if (button)
+                        button.enabled = true;
+                    isClicked = true;
+                }
+                float ratio = 1f - (leftTime / coolTime);
+                if (image)
+                    image.fillAmount = ratio;
             }
         }
     }
 
-    void Cooled()
+    public void StartCoolTime()
     {
-        Debug.Log("Cooled");
-        button.enabled = true;
-        transform.localScale *= 1.2f;
-        image.color = new Color(1f, 1f, 1f, 1f);
+        leftTime = coolTime;
+        isClicked = true;
+        if (button)
+            button.enabled = false;
     }
+
+    //void ClickButton()
+    //{
+    //    Debug.Log(gameObject.name);
+    //    transform.localScale = new Vector3(0.9f, 0.9f, 1);
+    //}
 }

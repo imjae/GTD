@@ -5,9 +5,8 @@ using UnityEngine;
 public class MonsterCollision : MonoBehaviour
 {
     public GameObject healthBar;
-
     private HealthSystem healthSystem;
-
+    
     private void Start()
     {
         healthSystem = healthBar.GetComponent<HealthSystem>();
@@ -15,6 +14,7 @@ public class MonsterCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        float playTime = GameManager.Instance.playTime;
         GameObject targetObject = other.gameObject;
         string targetTag = targetObject.tag;
 
@@ -26,5 +26,23 @@ public class MonsterCollision : MonoBehaviour
         {
 
         }
+        else if (targetTag.Equals("TriggerBox"))
+        {
+            if (playTime % 1f == 0)
+            {
+                healthSystem.TakeDamage(10);
+            }
+
+        }
+        else if (targetTag.Equals("IceTriggerBox")) ;
+        {
+            //if(Time.timeScale==1.0f)
+            //{
+            //    Time.timeScale = 0.5f;
+            //}
+
+            gameObject.GetComponent<Monster>().moveSpeed = 0.1f;
+        }
     }
+
 }

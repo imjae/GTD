@@ -9,8 +9,6 @@ public class LightningSkill : Skill
         type = SkillType.Lightning;
         damage = 45;
         rate = 30;
-        duration = 1;
-        speed = 0.1f;
     }
 
     public override void Use()
