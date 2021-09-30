@@ -17,6 +17,7 @@ TagManager:
   - Load
   - TowerGround
   - Tower
+  - DangerText
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,9 @@ public class Level1Map : MonoBehaviour
 
     public GameObject parent;
 
+    // 스폰이펙트 폭발위해 받아옴
+    public GameObject SpawnEffect;
+
     [SerializeField] 
     private SlimeMonsterFactory slimeFactory = null;
     [SerializeField]
@@ -42,6 +45,16 @@ public class Level1Map : MonoBehaviour
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
+            // 보스 출현 경고
+            GameManager.Instance.EmergenceBoss();
+            // Exploer 애니메이션 발동후 폭발 스크립트 이어짐 (SpawnExploer)
+            SpawnEffect.GetComponent<Animator>().SetTrigger("ExploerTrigger");
+
+
+            
+
+
+
             this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
@@ -56,10 +69,15 @@ public class Level1Map : MonoBehaviour
             GameManager.Instance.currentMonsterCount++;
         }
         // 드래곤 보스몹 출현 애니메이션으로 변경할 예정
-        /*else if (GameManager.Instance.playTime <= 50f)
+        else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
         {
+            // 보스 출현 경고
+            GameManager.Instance.EmergenceBoss();
+
+
             this.dragonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
-        }*/
+        }
     }
+
 }
