@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     // 몬스터 생성 간격 시간
     public float monsterRespawnTime = 1.5f;
 
-    CameraManager camera;
     public GameObject dangerText;
 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
@@ -127,7 +126,6 @@ public class GameManager : MonoBehaviour
     public void EmergenceBoss()
     {
         StartCoroutine(BlinkText());
-        camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraManager>();
-        camera.VibrateForTime(5f);
+        CameraManager.Instance.VibrateForTime(8f);
     }
 }

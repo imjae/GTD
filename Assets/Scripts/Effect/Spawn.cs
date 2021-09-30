@@ -13,6 +13,8 @@ public class Spawn : MonoBehaviour
 
     private ParticleSystem system;
 
+    // 보스 소환 마법진
+    public GameObject bossPortal;
     private void Start()
     {
         system = GetComponent<ParticleSystem>();
@@ -44,8 +46,8 @@ public class Spawn : MonoBehaviour
         fire6.GetComponent<Rigidbody>().AddForce(fire6VectorNormal * 200f);
 
         system.Stop();
+
+        GameObject portal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
+        portal.transform.SetParent(gameObject.transform);
     }
-
-
-   
 }

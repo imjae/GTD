@@ -45,13 +45,12 @@ public class Level1Map : MonoBehaviour
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
+            CameraManager.Instance.BossCameraOn();
             // 보스 출현 경고
             GameManager.Instance.EmergenceBoss();
             // Exploer 애니메이션 발동후 폭발 스크립트 이어짐 (SpawnExploer)
             SpawnEffect.GetComponent<Animator>().SetTrigger("ExploerTrigger");
 
-
-            
 
 
 
