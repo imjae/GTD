@@ -17,6 +17,7 @@ public class Ground : MonoBehaviour
     private void OnMouseDown()
     {
         //num = transform.parent.gameObject.GetComponent<groundTest>().towernum;
+
         Debug.Log(num);
 
         if (num == 1)
