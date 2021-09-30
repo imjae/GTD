@@ -19397,6 +19397,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 4344796076298966414, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 24.157444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344796076298966414, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 26.317747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344796076298966414, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344796076298966414, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.54
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4344796075500751324, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
