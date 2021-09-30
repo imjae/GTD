@@ -172,5 +172,5 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 0.007843138}
-    - _TintColor2: {r: 0.013456728, g: 0.5943396, b: 0.102395445, a: 0.105882354}
+    - _TintColor2: {r: 0.04223035, g: 0.6886792, b: 0.14201777, a: 0.27058825}
   m_BuildTextureStacks: []

@@ -517,6 +517,7 @@ MonoBehaviour:
   type: 0
   hp: 100
   damage: 10
+  dropGold: 100
   moveSpeed: 0.3
 --- !u!114 &8520187757578024485
 MonoBehaviour:
@@ -718,6 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoint: 0
+  maxHitPoint: 0
   Regenerate: 0
   regen: 0.1
   isDecrease: 0

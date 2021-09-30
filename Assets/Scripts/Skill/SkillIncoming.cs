@@ -17,8 +17,8 @@ public class SkillIncoming : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        speed = GetComponent<Skill>().speed;
-        duration = GetComponent<Skill>().duration;
+       /* speed = GetComponent<Skill>().speed;
+        duration = GetComponent<Skill>().duration;*/
         ground = GetComponent<Ground>();
 
         StartCoroutine(Incoming());
