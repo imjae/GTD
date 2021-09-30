@@ -8,7 +8,7 @@ public class Ground : MonoBehaviour
 
     private void Start()
     {
-        tower = transform.parent.gameObject.GetComponent<groundTest>().tower;
+        tower = transform.parent.gameObject.GetComponent<groundTest>().arrowtower;
     }
 
     private void OnMouseEnter()

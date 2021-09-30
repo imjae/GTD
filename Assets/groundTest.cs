@@ -5,5 +5,7 @@ using UnityEngine;
 public class groundTest : MonoBehaviour
 {
 
-    public GameObject tower;
+    public GameObject arrowtower;
+    public GameObject cannontower;
+    public GameObject magetower;
 }
