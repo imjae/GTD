@@ -13,15 +13,28 @@ public class SkillSound : MonoBehaviour
 
     void Start()
     {
-        GameObject madeObject = Instantiate(soundObject, transform.position, Quaternion.identity);
-        AudioSource madeSource = madeObject.GetComponent<AudioSource>();
+        StartCoroutine(SoundPlay());
+    }
 
-        if (soundObjectIsChild)
-            madeObject.transform.SetParent(transform);
 
-        if (destroyWhenDone)
+    IEnumerator SoundPlay()
+    {
+        while (true)
         {
-            Destroy(madeObject, madeSource.clip.length);
+            GameObject madeObject = Instantiate(soundObject, transform.position, Quaternion.identity);
+            AudioSource madeSource = madeObject.GetComponent<AudioSource>();
+
+            if (soundObjectIsChild)
+                madeObject.transform.SetParent(transform);
+
+            if (destroyWhenDone)
+                Destroy(madeObject, madeSource.clip.length);
+
+            if (gameObject.name == "Hail")
+                yield return null;
+
+            else
+                yield break;
         }
     }
 }
