@@ -6,8 +6,8 @@ public class AttckMonster : MonoBehaviour
 {
     public GameObject arrow;
     public GameObject StartPoint;
-    public GameObject monster;
     public float attackSpeed;
+    bool isAttack = false;
     void Start()
     {
         
@@ -22,11 +22,13 @@ public class AttckMonster : MonoBehaviour
     {
         if (other.tag == "Monster")
         {
-            StartCoroutine(AttackMonster(other.gameObject));
+            if (!isAttack)
+                StartCoroutine(AttackMonster(other.gameObject));
         }
     }
     private void OnTriggerExit(Collider other)
     {
+        isAttack = false;
     }
     void Attack()
     {
@@ -36,13 +38,16 @@ public class AttckMonster : MonoBehaviour
     }
     IEnumerator AttackMonster(GameObject target)
     {
+        isAttack = true;
         yield return new WaitForSeconds(0.1f);
         while (true)
         {
+            if (!isAttack)
+                break;
             var myArrow = Instantiate(arrow, StartPoint.transform.position, StartPoint.transform.rotation);
-            yield return new WaitForSeconds(attackSpeed);
             StartPoint.transform.LookAt(target.transform.position);
-            myArrow.GetComponent<Rigidbody>().AddForce(StartPoint.transform.forward * 1000);
+            myArrow.GetComponent<Rigidbody>().AddForce(StartPoint.transform.forward * 2000);
+            yield return new WaitForSeconds(attackSpeed);
         }
     }
 }
