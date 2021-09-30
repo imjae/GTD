@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4497102, g: 0.49977922, b: 0.57563627, a: 1}
+  m_IndirectSpecularColor: {r: 0.4497105, g: 0.49977976, b: 0.5756375, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1110,9 +1110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0709950db3ee041b3707c757b528e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowtower: {fileID: 4344796075500751326, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+  arrowtower: {fileID: 5108445201586104691, guid: f40400a99b08a7c4a91870cf5401e9b8, type: 3}
   cannontower: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
-  magetower: {fileID: 1980452956039334, guid: 9151417fa9caea340b9ae1e93c58a4b4, type: 3}
+  magetower: {fileID: 7581065545814454711, guid: 0ebafcff3515a3144ac916a897c31066, type: 3}
   towernum: 0
   grounds: []
 --- !u!1001 &500745682
@@ -1264,7 +1264,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonGroup: {fileID: 1542214776}
   buttonUI: {fileID: 1985820176}
-  groundTest: {fileID: 344773366}
 --- !u!1 &508265281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,18 +1587,18 @@ PrefabInstance:
     - target: {fileID: 6600254358728215589, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 987247700}
+      objectReference: {fileID: 987247705}
     - target: {fileID: 6600254358728215589, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6600254358728215589, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: GetDestroyObject
       objectReference: {fileID: 0}
     - target: {fileID: 6600254358728215589, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ClickBuildButton, Assembly-CSharp
+      value: DestroyButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6600254358728215589, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1897,6 +1896,7 @@ MonoBehaviour:
   monsterGameoverCount: 100
   monsterRespawnTime: 8
   isBuild: 0
+  isDestroy: 0
 --- !u!4 &1384493345
 Transform:
   m_ObjectHideFlags: 0
@@ -1963,9 +1963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf4dfd1ccb19c242841c1d3e9ef0efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonUI: {fileID: 1985820176}
+  buttonUI: {fileID: 1985820176}
   buttonGroup: {fileID: 1542214776}
-  groundTest: {fileID: 344773366}
 --- !u!114 &1535747973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,7 +2168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonGroup: {fileID: 0}
   buttonUI: {fileID: 0}
-  groundTest: {fileID: 0}
 --- !u!1 &1703724127
 GameObject:
   m_ObjectHideFlags: 0
