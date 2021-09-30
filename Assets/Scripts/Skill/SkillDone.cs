@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SkillDone : MonoBehaviour
 {
-    public float skillDuration;
+    public float duration;
 
     void Start()
     {
-
+        StartCoroutine(Duration());
     }
 
-    void Update()
+    IEnumerator Duration()
     {
-        
+        Debug.Log("지속시간: " + duration);
+        yield return new WaitForSeconds(duration);
+        Destroy(gameObject);
     }
 }
