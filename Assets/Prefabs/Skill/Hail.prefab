@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarrageIce
       objectReference: {fileID: 0}
+    - target: {fileID: 8980904249033857298, guid: 5f04809c1754cf84693570d1b2b817a2, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8980904249033857301, guid: 5f04809c1754cf84693570d1b2b817a2, type: 3}
       propertyPath: m_RootOrder
       value: 0

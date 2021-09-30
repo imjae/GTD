@@ -16,7 +16,7 @@ public class Ground : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        //num = transform.parent.gameObject.GetComponent<groundTest>().towernum;
+        num = 0;
 
         Debug.Log(num);
 
@@ -26,7 +26,8 @@ public class Ground : MonoBehaviour
             tower = transform.parent.gameObject.GetComponent<groundTest>().cannontower;
         else if (num == 3)
             tower = transform.parent.gameObject.GetComponent<groundTest>().magetower;
-        Instantiate(tower, transform.position, Quaternion.identity);
+        
+        //Instantiate(tower, transform.position, Quaternion.identity);
     }
     private void OnMouseExit()
     {
