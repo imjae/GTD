@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundTransform: {fileID: 0}
   tower: {fileID: 4344796075500751326, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+  buildButton: {fileID: 6600254358728215584, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
 --- !u!1 &4307175459769285140
 GameObject:
   m_ObjectHideFlags: 0
