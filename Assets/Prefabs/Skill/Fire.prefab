@@ -63,8 +63,6 @@ MonoBehaviour:
   type: 0
   damage: 30
   rate: 30
-  duration: 3
-  speed: 0.5
 --- !u!114 &2132189280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225090f0f7b661a45b8390b7738771df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDuration: 2
+  duration: 3
 --- !u!1001 &7010489244676529246
 PrefabInstance:
   m_ObjectHideFlags: 0
