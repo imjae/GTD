@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 888797640}
   m_Layer: 0
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,6 @@ MonoBehaviour:
   soundObject: {fileID: 1550860577769395562, guid: 1253019de2c125a41a0022208dfe0d4b, type: 3}
   destroyWhenDone: 1
   soundObjectIsChild: 0
-  randomPitch: 1
 --- !u!114 &888797640
 MonoBehaviour:
   m_ObjectHideFlags: 0

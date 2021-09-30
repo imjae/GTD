@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3201287055695410573}
   m_Layer: 0
   m_Name: Hail
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,6 @@ MonoBehaviour:
   soundObject: {fileID: 5785754680778777210, guid: 1adf89f7816accf4da9a1d26b46605ef, type: 3}
   destroyWhenDone: 1
   soundObjectIsChild: 0
-  randomPitch: 1
 --- !u!114 &3201287055695410573
 MonoBehaviour:
   m_ObjectHideFlags: 0
