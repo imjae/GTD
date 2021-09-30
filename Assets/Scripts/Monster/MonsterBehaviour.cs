@@ -71,7 +71,7 @@ public class MonsterBehaviour : MonoBehaviour
                 if(isFirstPower)
                 {
                     Vector3 horizontalVector = new Vector3(-1f, 0.3f, Random.Range(-0.3f, 0.3f));
-                    float power = Random.Range(16f, 22f);
+                    float power = Random.Range(20f, 23f);
                     tmpRigidBody.velocity = horizontalVector.normalized * power;
                     //tmpRigidBody.AddForce(a.normalized * 1600f);
                     isFirstPower = false;

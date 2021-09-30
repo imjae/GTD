@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     // 몬스터 생성 간격 시간
     public float monsterRespawnTime = 1.5f;
 
+    public GameObject dangerText;
 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
     private static GameManager _instance;
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -104,5 +105,27 @@ public class GameManager : MonoBehaviour
                 Debug.Log($"난이도를 설정해 주세요");
                 break;
         }
+    }
+
+
+   
+    public IEnumerator BlinkText()
+    {
+        int count = 0;
+        while(count < 5)
+        {
+            this.dangerText.SetActive(false);
+            yield return new WaitForSeconds(.5f);
+            this.dangerText.SetActive(true);
+            yield return new WaitForSeconds(.5f);
+            count++;
+        }
+        this.dangerText.SetActive(false);
+    }
+
+    public void EmergenceBoss()
+    {
+        StartCoroutine(BlinkText());
+        CameraManager.Instance.VibrateForTime(8f);
     }
 }

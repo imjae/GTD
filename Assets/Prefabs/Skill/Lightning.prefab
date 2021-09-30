@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2496860943151130994}
   m_Layer: 0
   m_Name: Lightning
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 3, z: 20}
+  m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4375113542676269706
 MonoBehaviour:
@@ -64,8 +64,6 @@ MonoBehaviour:
   type: 1
   damage: 45
   rate: 30
-  duration: 1
-  speed: 0.1
 --- !u!114 &1262545533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +79,6 @@ MonoBehaviour:
   soundObject: {fileID: 5003786039884735400, guid: ab77a89327839aa4aa9f5362c6dafe80, type: 3}
   destroyWhenDone: 1
   soundObjectIsChild: 0
-  randomPitch: 1
 --- !u!114 &2496860943151130994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225090f0f7b661a45b8390b7738771df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDuration: 1
+  duration: 1
 --- !u!1001 &2617050294499964693
 PrefabInstance:
   m_ObjectHideFlags: 0
