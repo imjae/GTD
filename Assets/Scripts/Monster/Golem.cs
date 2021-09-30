@@ -9,15 +9,7 @@ public class Golem : Monster
         type = MonsterType.Golem;
         hp = 400;
         damage = 10;
-
+        dropGold = 400;
         moveSpeed = 0.2f;
-    }
-
-    public override void Move()
-    {
-    }
-    public override void Die()
-    {
-
     }
 }

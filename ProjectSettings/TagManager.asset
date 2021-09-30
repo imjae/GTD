@@ -14,6 +14,9 @@ TagManager:
   - Waypoint3
   - Waypoint4
   - Waypoint5
+  - Load
+  - TowerGround
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Monster
   - 
   - 
   - 

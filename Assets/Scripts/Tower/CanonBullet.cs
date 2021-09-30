@@ -51,7 +51,7 @@ public class CanonBullet : MonoBehaviour
         particles[2].Play();
         rend.enabled = false;
         col.enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 }

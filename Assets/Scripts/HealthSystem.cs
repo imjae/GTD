@@ -14,22 +14,27 @@ using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-	public float hitPoint = 100f;
-	public float maxHitPoint = 100f;
 
 	//==============================================================
 	// Regenerate Health & Mana
 	//==============================================================
+
+	public float hitPoint = 0.0f;
+	public float maxHitPoint = 0.0f;
+
 	public bool Regenerate = true;
 	public float regen = 0.1f;
 
 	public bool isDecrease = true;
 	public float decreaseHealth = 0.1f;
 
-	private float timeleft = 0.0f;	// Left time for current interval
+	private float timeleft = 0.0f;  // Left time for current interval
+	
 	public float regenUpdateInterval = 1f;
 
 	public bool GodMode;
+
+	private GameObject realObject;
 
 
 	//==============================================================
@@ -37,6 +42,11 @@ public class HealthSystem : MonoBehaviour
 	//==============================================================
   	void Start()
 	{
+		realObject = transform.parent.parent.gameObject;
+		float hp = realObject.GetComponent<Monster>().hp;
+		this.hitPoint = hp;
+		this.maxHitPoint = hp;
+
 		UpdateGraphics();
 		timeleft = regenUpdateInterval;
 	}

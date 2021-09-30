@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4114623480867794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4510176718482566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4503789465906966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   - component: {fileID: 4065624273618060}
   - component: {fileID: 940112863}
   - component: {fileID: 940112864}
-  m_Layer: 0
+  - component: {fileID: 6711707533264025024}
+  m_Layer: 7
   m_Name: Body
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -150,11 +151,24 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240222798952858}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4770206
-  m_Center: {x: -0.34883597, y: 0.14683546, z: 0.004140472}
+  m_Radius: 0.5818437
+  m_Center: {x: -0.45365664, y: 0.14683427, z: 0.0041404567}
+--- !u!114 &6711707533264025024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240222798952858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15662382710256b4295c27ebb4575347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 7990834218968819841}
 --- !u!1 &1292789949531180
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4240697694467668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795350722333334}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4759525489219708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4358697761044548}
   - component: {fileID: 137218116663036162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4666598129497682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UpperEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4451561462174574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4323091512933832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeCTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +459,7 @@ GameObject:
   - component: {fileID: 95457531584545886}
   - component: {fileID: 6331195640430055812}
   - component: {fileID: 8520187757578024485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlimePBR
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -461,7 +475,7 @@ Transform:
   m_GameObject: {fileID: 1931298151966786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4065624273618060}
   - {fileID: 4358697761044548}
@@ -528,7 +542,7 @@ GameObject:
   - component: {fileID: 1351306475408178827}
   - component: {fileID: 637329268800962304}
   - component: {fileID: 5472993400502911635}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +642,7 @@ GameObject:
   - component: {fileID: 8658475256650449659}
   - component: {fileID: 3671327206449405087}
   - component: {fileID: 6526490238163932817}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,11 +718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aec7115bdf1654a990e45452bcdd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 100
-  maxHitPoint: 100
   Regenerate: 0
   regen: 0.1
-  isDecrease: 1
-  decreaseHealth: 1
-  regenUpdateInterval: 1
+  isDecrease: 0
+  decreaseHealth: 10
+  regenUpdateInterval: 0.5
   GodMode: 0

@@ -9,15 +9,7 @@ public class Orc : Monster
         type = MonsterType.Orc;
         hp = 300;
         damage = 10;
-
+        dropGold = 300;
         moveSpeed = 0.1f;
-    }
-
-    public override void Move()
-    {
-    }
-    public override void Die()
-    {
-
     }
 }
