@@ -21,11 +21,7 @@ public class CanonShooter : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-            CanonShoot();
-    }
+
 
     private void FixedUpdate()
     {
