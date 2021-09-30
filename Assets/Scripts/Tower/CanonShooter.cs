@@ -34,7 +34,7 @@ public class CanonShooter : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Target"))
+        if (other.tag == "Target")
         {
             Debug.Log("Lock On");
             if (playTime % 1.5 == 0)
