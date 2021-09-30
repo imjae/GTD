@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     // 몬스터 생성 간격 시간
     public float monsterRespawnTime = 1.5f;
 
+    // 타워 건설 시점
+    public bool isBuild = false;
+
 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
     private static GameManager _instance;
