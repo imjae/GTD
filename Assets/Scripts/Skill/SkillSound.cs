@@ -11,29 +11,30 @@ public class SkillSound : MonoBehaviour
     public bool destroyWhenDone = true;
     public bool soundObjectIsChild = false;
 
-    [Range(0.01f, 10f)]
-    public float randomPitch = 1f;
-
     void Start()
     {
-        GameObject madeObject = Instantiate(soundObject, transform.position, Quaternion.identity);
-        AudioSource madeSource = madeObject.GetComponent<AudioSource>();
+        StartCoroutine(SoundPlay());
+    }
 
-        if (soundObjectIsChild)
-            madeObject.transform.SetParent(transform);
 
-        if (randomPitch != 1)
+    IEnumerator SoundPlay()
+    {
+        while (true)
         {
-            if (Random.value < .5)
-                madeSource.pitch *= Random.Range(1 / randomPitch, 1);
+            GameObject madeObject = Instantiate(soundObject, transform.position, Quaternion.identity);
+            AudioSource madeSource = madeObject.GetComponent<AudioSource>();
+
+            if (soundObjectIsChild)
+                madeObject.transform.SetParent(transform);
+
+            if (destroyWhenDone)
+                Destroy(madeObject, madeSource.clip.length);
+
+            if (gameObject.name == "Hail")
+                yield return null;
+
             else
-                madeSource.pitch *= Random.Range(1, randomPitch);
-        }
-
-        if (destroyWhenDone)
-        {
-            float duration = madeSource.clip.length / madeSource.pitch;
-            Destroy(madeObject, duration);
+                yield break;
         }
     }
 }
