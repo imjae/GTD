@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2496860943151130994}
   m_Layer: 0
   m_Name: Lightning
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,6 @@ MonoBehaviour:
   soundObject: {fileID: 5003786039884735400, guid: ab77a89327839aa4aa9f5362c6dafe80, type: 3}
   destroyWhenDone: 1
   soundObjectIsChild: 0
-  randomPitch: 1
 --- !u!114 &2496860943151130994
 MonoBehaviour:
   m_ObjectHideFlags: 0
