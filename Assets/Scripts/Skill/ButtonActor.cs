@@ -10,6 +10,7 @@ public class ButtonActor : MonoBehaviour
     Image image;
     Button button;
     public GameObject skill;
+    public GameObject target;
     float coolTime;
     float leftTime;
     float fillRatio;
@@ -29,6 +30,7 @@ public class ButtonActor : MonoBehaviour
         button.enabled = false;
         transform.localScale /= 1.2f;
         image.color = new Color(1f, 1f, 1f, 0.8f);
+        target.SetActive(true);
         StartCoroutine(CoolTime());
     }
 
@@ -40,7 +42,6 @@ public class ButtonActor : MonoBehaviour
             leftTime -= Time.deltaTime;
             fillRatio = 1f - (leftTime / coolTime);
             image.fillAmount = fillRatio;
-            Debug.Log(gameObject.name + ": ÄðÅ¸ÀÓ " + (int)leftTime + "ÃÊ");
             yield return null;
 
             if (leftTime <= 0)
