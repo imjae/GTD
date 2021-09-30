@@ -822,6 +822,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerSpwanEffect: {fileID: 4050193297841364667, guid: a4f44482eebbb9e4c95f1b10ee6cb116, type: 3}
+--- !u!1 &1576435310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7568335067109759302, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
+  m_PrefabInstance: {fileID: 7568335066900495020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1576435312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576435310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0709950db3ee041b3707c757b528e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowtower: {fileID: 4344796075500751326, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
+  cannontower: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
+  magetower: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
+  towernum: 1
 --- !u!1 &1817210315
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +916,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1988077171, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
+      propertyPath: popup
+      value: 
+      objectReference: {fileID: 6600254358728215584, guid: 0787f0c246c2063439f08d790fcdcef8, type: 3}
+    - target: {fileID: 1988077171, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 4344796075500751326, guid: 65ac8419e1fe6794f82aceb8a56a67a6, type: 3}
     - target: {fileID: 3499686920948133527, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
       propertyPath: m_Name
       value: Level1Map
@@ -943,5 +972,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1988077172, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0dcc6ef46abccd49967fbfd1c47210a, type: 3}
