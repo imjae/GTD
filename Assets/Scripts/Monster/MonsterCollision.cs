@@ -27,5 +27,4 @@ public class MonsterCollision : MonoBehaviour
 
         }
     }
-
 }
