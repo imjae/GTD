@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3755961005672597120}
   - component: {fileID: 1311288629028565262}
   - component: {fileID: 7320510448260063259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonShooter
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 1029251957555295752}
   - component: {fileID: 5396176807483521814}
   - component: {fileID: 1214804729032817491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5045,7 +5045,7 @@ GameObject:
   - component: {fileID: 8135181952088816557}
   - component: {fileID: 8125216800053304937}
   - component: {fileID: 8111110514003830860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonTowerUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5146,7 +5146,8 @@ GameObject:
   - component: {fileID: 8115072300171443257}
   - component: {fileID: 8134918552941916771}
   - component: {fileID: 8125298472236082915}
-  m_Layer: 0
+  - component: {fileID: 3295943368534860779}
+  m_Layer: 8
   m_Name: CanonTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -5217,3 +5218,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3295943368534860779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112865385760117463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.620388, y: 52.3, z: 9.810896}
+  m_Center: {x: 0.0000009536743, y: 13.4, z: -0.59525514}

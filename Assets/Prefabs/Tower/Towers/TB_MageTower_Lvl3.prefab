@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4205945055790028}
   - component: {fileID: 33344808535897150}
   - component: {fileID: 23385109583046054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TB_MageTower_Lvl3_Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4636309902149930}
   - component: {fileID: 33657934121018790}
   - component: {fileID: 23215396982161218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TB_MageTower_Lvl3
   m_TagString: Tower
   m_Icon: {fileID: 0}
