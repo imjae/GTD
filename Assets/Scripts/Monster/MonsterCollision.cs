@@ -27,48 +27,49 @@ public class MonsterCollision : MonoBehaviour
         {
 
         }
-      
-        
+        else if (targetTag.Equals("Skill"))
+        {
+            healthSystem.TakeDamage(targetObject.GetComponent<Skill>().damage);
+        }
+
+
     }
 
     private void OnTriggerStay(Collider other)
     {
-        
+
         GameObject targetObject = other.gameObject;
         string targetTag = targetObject.tag;
 
 
         if (GameManager.Instance.playTime % 1f == 0)
         {
-           
+
             if (targetTag.Equals("TriggerBox"))
             {
                 healthSystem.TakeDamage(15);
-                
+
             }
-            else if(targetTag.Equals("IceTriggerBox"))
+            else if (targetTag.Equals("IceTriggerBox"))
             {
                 gameObject.transform.parent.gameObject.GetComponent<Monster>().moveSpeed = 0.1f;
             }
         }
-        
+
     }
-   
-    
+
+
 
 
     private void OnTriggerExit(Collider other)
     {
-        
+
         {
             if (!isPoison)
             {
 
                 StartCoroutine(OnBuffCoroutine(6));
             }
-        else if (targetTag.Equals("Skill"))
-        {
-            healthSystem.TakeDamage(targetObject.GetComponent<Skill>().damage);
         }
     }
     IEnumerator OnBuffCoroutine(int time)
