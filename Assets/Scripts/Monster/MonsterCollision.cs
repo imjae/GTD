@@ -70,6 +70,10 @@ public class MonsterCollision : MonoBehaviour
 
                 StartCoroutine(OnBuffCoroutine(6));
             }
+            else
+            {
+                gameObject.transform.parent.gameObject.GetComponent<Monster>().moveSpeed = 0.3f;
+            }
         }
     }
     IEnumerator OnBuffCoroutine(int time)
@@ -84,7 +88,7 @@ public class MonsterCollision : MonoBehaviour
         }
         isPoison = false;
     }
-
+    
 
 }
 
