@@ -24544,6 +24544,7 @@ GameObject:
   - component: {fileID: 8909070154530632405}
   - component: {fileID: 8750300116784188097}
   - component: {fileID: 8748591166771044329}
+  - component: {fileID: 7033148468752691157}
   m_Layer: 0
   m_Name: MegaBlackHolePurple
   m_TagString: Untagged
@@ -29421,3 +29422,22 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!95 &7033148468752691157
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912152555528470839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3a7981e7ef97d5408e485a43541f912, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
