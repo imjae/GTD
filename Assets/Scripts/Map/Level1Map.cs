@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Level1Map : MonoBehaviour
 {
+    public GameObject slime;
     public Transform respawnPoint;
 
     public GameObject parent;
 
-    // ½ºÆùÀÌÆåÆ® Æø¹ßÀ§ÇØ ¹Þ¾Æ¿È
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¿ï¿½
     public GameObject SpawnEffect;
 
     [SerializeField] 
@@ -22,7 +23,14 @@ public class Level1Map : MonoBehaviour
     [SerializeField]
     private DragonMonsterFactory dragonFactory = null;
 
-    public GameObject[] wayPoint;
+    public Vector3[] wayPoint = new Vector3[]{
+        new Vector3(45f, -0.5f, -26.89f),
+        new Vector3(45f, -0.5f, -56.89f),
+        new Vector3(-75f, -0.5f, -56.89f),
+        new Vector3(-75f, -0.5f, 3.1f),
+        new Vector3(45f, -0.5f, -26.89f)
+    };
+
 
     void Start()
     {
@@ -36,7 +44,7 @@ public class Level1Map : MonoBehaviour
 
     private void CreateMonster()
     {
-        // ¸®½ºÆùµÈ ÀüÃ¼ ¸ó½ºÅÍ¼ö Áõ°¡
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         if (GameManager.Instance.playTime <= 10f)
         {
@@ -46,9 +54,9 @@ public class Level1Map : MonoBehaviour
         else if (GameManager.Instance.playTime <= 20f)
         {
             CameraManager.Instance.BossCameraOn();
-            // º¸½º ÃâÇö °æ°í
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             GameManager.Instance.EmergenceBoss();
-            // Exploer ¾Ö´Ï¸ÞÀÌ¼Ç ¹ßµ¿ÈÄ Æø¹ß ½ºÅ©¸³Æ® ÀÌ¾îÁü (SpawnExploer)
+            // Exploer ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ßµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½Ì¾ï¿½ï¿½ï¿½ (SpawnExploer)
             SpawnEffect.GetComponent<Animator>().SetTrigger("ExploerTrigger");
 
 
@@ -67,10 +75,10 @@ public class Level1Map : MonoBehaviour
             this.golemFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
-        // µå·¡°ï º¸½º¸÷ ÃâÇö ¾Ö´Ï¸ÞÀÌ¼ÇÀ¸·Î º¯°æÇÒ ¿¹Á¤
+        // ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
         {
-            // º¸½º ÃâÇö °æ°í
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             GameManager.Instance.EmergenceBoss();
 
 

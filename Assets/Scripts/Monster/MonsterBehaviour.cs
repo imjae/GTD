@@ -8,36 +8,19 @@ public class MonsterBehaviour : MonoBehaviour
     private Transform monsterTransform;
     private GameObject healthBar;
     private HealthSystem healthSystem;
-    private Vector3 spawnPosition;
 
     private Animator animator;
 
-    // ¸ó½ºÅÍ°¡ »ý¼ºµÈ ¸Ê(ºÎ¸ðÀÇ ºÎ¸ð°´Ã¼ °¡Á®¿À´Â ¹æ½ÄÀ¸·Î ±¸Çö)
-    private GameObject currentMap;
-
-    bool isFirstPower = true;
-    bool isTouchStartTile = false;
     bool isDie = false;
-
-    // Ã¹¹ø¤Š ¿þÀÌÆ÷ÀÎÆ® Âï°í³ª¼­ false·Î º¯°æµÇ¾î LookAt ¹«È¿È­ ½ÃÅ°´Â º¯¼ö
-    bool isFirstWayPoint = true;
-
-    private Rigidbody tmpRigidBody;
 
     // Start is called before the first frame update
     void Start()
     {
         monster = GetComponent<Monster>();
         monsterTransform = monster.transform;
-        spawnPosition = monsterTransform.position;
-
         healthBar = transform.Find("Canvas").Find("HealthBar").gameObject;
         healthSystem = healthBar.GetComponent<HealthSystem>();
         animator = GetComponent<Animator>();
-
-        tmpRigidBody = GetComponent<Rigidbody>();
-
-        currentMap = transform.parent.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -84,12 +67,13 @@ public class MonsterBehaviour : MonoBehaviour
     void triggerTouchStartTile()
     {
         animator.SetTrigger("WalkTrigger");
-        // Ã³À½ ½ÃÀÛ Å¸ÀÏÀ» ¹â¾Ò´Ù´Â Ç¥½Ã
+        // Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´Ù´ï¿½ Ç¥ï¿½ï¿½
         this.isTouchStartTile = true;
     }
 
     public void MonsterDestroy()
     {
+
         Destroy(gameObject);
     }
 }

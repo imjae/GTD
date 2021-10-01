@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
-  - Arrow
   - Target
   - Bullet
   - Ground
@@ -19,6 +18,8 @@ TagManager:
   - Tower
   - DangerText
   - Skill
+  - TriggerBox
+  - IceTriggerBox
   layers:
   - Default
   - TransparentFX
