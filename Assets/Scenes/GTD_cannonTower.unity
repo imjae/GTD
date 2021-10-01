@@ -18755,6 +18755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7320510448260063259, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
+      propertyPath: m_Radius
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
       propertyPath: m_Name
       value: CanonTower

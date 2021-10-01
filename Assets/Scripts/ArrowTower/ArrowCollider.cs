@@ -19,5 +19,8 @@ public class ArrowCollider : MonoBehaviour
     {
         if (other.tag == "Monster")
             Destroy(this.gameObject);
+        else if(other.tag == "TowerGround")
+            Destroy(this.gameObject);
+
     }
 }
