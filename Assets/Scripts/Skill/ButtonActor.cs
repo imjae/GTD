@@ -5,24 +5,42 @@ using UnityEngine.UI;
 
 public class ButtonActor : MonoBehaviour
 {
-    public Image image;
-    public Button button;
-    public float coolTime = 10f;
-    public bool isClicked = false;
-    float leftTime = 10f;
-    float speed = 5f;
+    Image image;
+    Button button;
+    public GameObject skill;
+    public GameObject target;
+    float coolTime;
+    float leftTime;
+    float fillRatio;
 
     void Start()
     {
         button = GetComponent<Button>();
-        //button.onClick.AddListener(ClickButton);
+        coolTime = skill.GetComponent<Skill>().rate;
+        button.onClick.AddListener(UseSkill);
+    }
+
+    void UseSkill()
+    {
+        Debug.Log(gameObject.name + " ���");
+        leftTime = coolTime;
+        button.enabled = false;
+        transform.localScale /= 1.2f;
+        image.color = new Color(1f, 1f, 1f, 0.8f);
+        target.SetActive(true);
+        StartCoroutine(CoolTime());
     }
 
     void Update()
     {
         if (isClicked)
         {
-            if (leftTime > 0)
+            leftTime -= Time.deltaTime;
+            fillRatio = 1f - (leftTime / coolTime);
+            image.fillAmount = fillRatio;
+            yield return null;
+
+            if (leftTime <= 0)
             {
                 leftTime -= Time.deltaTime * speed;
                 if (leftTime < 0)

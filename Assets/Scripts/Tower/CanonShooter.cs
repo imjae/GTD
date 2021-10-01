@@ -21,11 +21,7 @@ public class CanonShooter : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-            CanonShoot();
-    }
+
 
     private void FixedUpdate()
     {
@@ -34,7 +30,7 @@ public class CanonShooter : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Target"))
+        if (other.tag == "Target")
         {
             Debug.Log("Lock On");
             if (playTime % 1.5 == 0)

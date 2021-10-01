@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ½ºÅ³ »ç¿ë½Ã »ç¿îµå Àç»ý°ú µµÂøÀ» °üÀåÇÏ´Â ½ºÅ©¸³Æ®
+// ï¿½ï¿½Å³ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®
 
 public class SkillIncoming : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class SkillIncoming : MonoBehaviour
 
     IEnumerator Duration()
     {
-        Debug.Log("Áö¼Ó½Ã°£: " + duration);
+        Debug.Log("ï¿½ï¿½ï¿½Ó½Ã°ï¿½: " + duration);
         yield return new WaitForSeconds(duration);
         Destroy(gameObject);
     }

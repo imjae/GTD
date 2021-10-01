@@ -9,6 +9,9 @@ public class Level1Map : MonoBehaviour
 
     public GameObject parent;
 
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¿ï¿½
+    public GameObject SpawnEffect;
+
     [SerializeField] 
     private SlimeMonsterFactory slimeFactory = null;
     [SerializeField]
@@ -41,7 +44,7 @@ public class Level1Map : MonoBehaviour
 
     private void CreateMonster()
     {
-        // ¸®½ºÆùµÈ ÀüÃ¼ ¸ó½ºÅÍ¼ö Áõ°¡
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         if (GameManager.Instance.playTime <= 10f)
         {
@@ -50,6 +53,15 @@ public class Level1Map : MonoBehaviour
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
+            CameraManager.Instance.BossCameraOn();
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            GameManager.Instance.EmergenceBoss();
+            // Exploer ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ßµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½Ì¾ï¿½ï¿½ï¿½ (SpawnExploer)
+            SpawnEffect.GetComponent<Animator>().SetTrigger("ExploerTrigger");
+
+
+
+
             this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
@@ -63,10 +75,16 @@ public class Level1Map : MonoBehaviour
             this.golemFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
-        else if (GameManager.Instance.playTime <= 50f)
+        // ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
         {
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            GameManager.Instance.EmergenceBoss();
+
+
             this.dragonFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
     }
+
 }

@@ -20,7 +20,8 @@ public class MonsterCollision : MonoBehaviour
 
         if (targetTag.Equals("Bullet"))
         {
-            healthSystem.TakeDamage(1000);
+            //healthSystem.TakeDamage(targetObject.GetComponent<Bullet>().damage);
+            healthSystem.TakeDamage(20);
         }
         else if (targetTag.Equals("Arrow"))
         {
@@ -65,6 +66,9 @@ public class MonsterCollision : MonoBehaviour
 
                 StartCoroutine(OnBuffCoroutine(6));
             }
+        else if (targetTag.Equals("Skill"))
+        {
+            healthSystem.TakeDamage(targetObject.GetComponent<Skill>().damage);
         }
     }
     IEnumerator OnBuffCoroutine(int time)

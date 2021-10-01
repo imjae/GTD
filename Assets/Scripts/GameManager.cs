@@ -4,31 +4,37 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // °ÔÀÓ Á¤Áö ¿©ºÎ
+    // ê²Œì„ ì •ì§€ ì—¬ë¶€
     public bool isPause = true;
-    // °ÔÀÓ °æ°ú ½Ã°£
+    // ê²Œì„ ê²½ê³¼ ì‹œê°„
     public float playTime;
 
-    // ÇöÀç ³­ÀÌµµ
+    // í˜„ì¬ ë‚œì´ë„
     public int currentDifficuty = 1;
-    // ÇöÀç º¸À¯ °ñµå
+    // í˜„ì¬ ë³´ìœ  ê³¨ë“œ
     public int currentGold = 0;
-    // ÇöÀç »ı¼ºµÈ ¸ó½ºÅÍ ¼ö
+    // í˜„ì¬ ìƒì„±ëœ ëª¬ìŠ¤í„° ìˆ˜
     public int currentMonsterCount = 0;
-    // °ÔÀÓ¿À¹ö ±âÁØ ¸ó½ºÅÍ¼ö
+    // ê²Œì„ì˜¤ë²„ ê¸°ì¤€ ëª¬ìŠ¤í„°ìˆ˜
     public int monsterGameoverCount = 100;
-    // ¸ó½ºÅÍ »ı¼º °£°İ ½Ã°£
+    // ëª¬ìŠ¤í„° ìƒì„± ê°„ê²© ì‹œê°„
     public float monsterRespawnTime = 1.5f;
 
+    // íƒ€ì›Œ ê±´ì„¤ ì‹œì 
+    public bool isBuild = false;
 
-    // ½Ì±ÛÅæ ÆĞÅÏÀ» »ç¿ëÇÏ±â À§ÇÑ ÀÎ½ºÅÏ½º º¯¼ö
+    public bool isDestroy = false;
+
+    public GameObject dangerText;
+
+    // ì‹±ê¸€í†¤ íŒ¨í„´ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•œ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
     private static GameManager _instance;
-    // ÀÎ½ºÅÏ½º¿¡ Á¢±ÙÇÏ±â À§ÇÑ ÇÁ·ÎÆÛÆ¼
+    // ì¸ìŠ¤í„´ìŠ¤ì— ì ‘ê·¼í•˜ê¸° ìœ„í•œ í”„ë¡œí¼í‹°
     public static GameManager Instance
     {
         get
         {
-            // ÀÎ½ºÅÏ½º°¡ ¾ø´Â °æ¿ì¿¡ Á¢±ÙÇÏ·Á ÇÏ¸é ÀÎ½ºÅÏ½º¸¦ ÇÒ´ç.
+            // ì¸ìŠ¤í„´ìŠ¤ê°€ ì—†ëŠ” ê²½ìš°ì— ì ‘ê·¼í•˜ë ¤ í•˜ë©´ ì¸ìŠ¤í„´ìŠ¤ë¥¼ í• ë‹¹.
             if (!_instance)
             {
                 _instance = FindObjectOfType(typeof(GameManager)) as GameManager;
@@ -46,18 +52,18 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        // ÀÎ½ºÅÏ½º°¡ Á¸ÀçÇÏ´Â °æ¿ì »õ·Î»ı±â´Â ÀÎ½ºÅÏ½º¸¦ »èÁ¦ÇÑ´Ù.
+        // ì¸ìŠ¤í„´ìŠ¤ê°€ ì¡´ì¬í•˜ëŠ” ê²½ìš° ìƒˆë¡œìƒê¸°ëŠ” ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì‚­ì œí•œë‹¤.
         else if (_instance != this)
         {
             Destroy(gameObject);
         }
-        // ¾Æ·¡ÀÇ ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© ¾ÀÀÌ ÀüÈ¯µÇ´õ¶óµµ ¼±¾ğµÇ¾ú´ø ÀÎ½ºÅÏ½º°¡ ÆÄ±«µÇÁö ¾Ê´Â´Ù.
+        // ì•„ë˜ì˜ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì”¬ì´ ì „í™˜ë˜ë”ë¼ë„ ì„ ì–¸ë˜ì—ˆë˜ ì¸ìŠ¤í„´ìŠ¤ê°€ íŒŒê´´ë˜ì§€ ì•ŠëŠ”ë‹¤.
         DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -70,39 +76,61 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // ¸ó½ºÅÍ »ı¼º ÇÔ¼ö
+    // ëª¬ìŠ¤í„° ìƒì„± í•¨ìˆ˜
     public void GeneratedMonster()
     {
 
     }
 
-    // °ÔÀÓ¿À¹ö ÆÇ´Ü ÇÔ¼ö
+    // ê²Œì„ì˜¤ë²„ íŒë‹¨ í•¨ìˆ˜
     public bool JudgmentGameover()
     {
-        // ÇöÀç ¸ó½ºÅÍ ¼ö°¡ ±âÁØ ¸ó½ºÅÍ ¼ö°¡ Å©°Å³ª °°ØÀÌ¸é True(°ÔÀÓ¿À¹ö) ¹İÈ¯
+        // í˜„ì¬ ëª¬ìŠ¤í„° ìˆ˜ê°€ ê¸°ì¤€ ëª¬ìŠ¤í„° ìˆ˜ê°€ í¬ê±°ë‚˜ ê°™Âè”“è¦‹ True(ê²Œì„ì˜¤ë²„) ë°˜í™˜
         if (this.currentMonsterCount >= monsterGameoverCount)
             return true;
         else
             return false;
     }
 
-    // ³­ÀÌµµ ¼³Á¤
+    // ë‚œì´ë„ ì„¤ì •
     public void SettingDifficuty(int difficury)
     {
         switch (difficury)
         {
             case 1:
-                    // ³­ÀÌµµ 1ÀÏ¶§ ¼³Á¤
+                    // ë‚œì´ë„ 1ì¼ë•Œ ì„¤ì •
                     break;
             case 2:
-                    // ³­ÀÌµµ 2ÀÏ¶§ ¼³Á¤
+                    // ë‚œì´ë„ 2ì¼ë•Œ ì„¤ì •
                     break;
             case 3:
-                    // ³­ÀÌµµ 3ÀÏ¶§ ¼³Á¤
+                    // ë‚œì´ë„ 3ì¼ë•Œ ì„¤ì •
                     break;
             default:
-                Debug.Log($"³­ÀÌµµ¸¦ ¼³Á¤ÇØ ÁÖ¼¼¿ä");
+                Debug.Log($"ë‚œì´ë„ë¥¼ ì„¤ì •í•´ ì£¼ì„¸ìš”");
                 break;
         }
+    }
+
+
+   
+    public IEnumerator BlinkText()
+    {
+        int count = 0;
+        while(count < 5)
+        {
+            this.dangerText.SetActive(false);
+            yield return new WaitForSeconds(.5f);
+            this.dangerText.SetActive(true);
+            yield return new WaitForSeconds(.5f);
+            count++;
+        }
+        this.dangerText.SetActive(false);
+    }
+
+    public void EmergenceBoss()
+    {
+        StartCoroutine(BlinkText());
+        CameraManager.Instance.VibrateForTime(8f);
     }
 }

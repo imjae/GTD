@@ -17,6 +17,9 @@ TagManager:
   - TowerGround
   - TriggerBox
   - IceTriggerBox
+  - Tower
+  - DangerText
+  - Skill
   layers:
   - Default
   - TransparentFX

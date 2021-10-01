@@ -39,6 +39,37 @@ public class MonsterBehaviour : MonoBehaviour
     {
         if(!isDie)
             monsterTransform.Translate(Vector3.forward * monster.moveSpeed);
+        {
+            if(isTouchStartTile)
+            {
+                if (isFirstWayPoint)
+                {
+
+                    transform.LookAt(currentMap.GetComponent<Level1Map>().wayPoint[0].transform);
+                    isFirstWayPoint = false;
+                }
+                monsterTransform.Translate(Vector3.forward * monster.moveSpeed);
+            }
+            else
+            {
+                if(isFirstPower)
+                {
+                    Vector3 horizontalVector = new Vector3(-1f, 0.3f, Random.Range(-0.3f, 0.3f));
+                    float power = Random.Range(20f, 23f);
+                    tmpRigidBody.velocity = horizontalVector.normalized * power;
+                    //tmpRigidBody.AddForce(a.normalized * 1600f);
+                    isFirstPower = false;
+                }
+            }
+        }
+            
+    }
+
+    void triggerTouchStartTile()
+    {
+        animator.SetTrigger("WalkTrigger");
+        // ó�� ���� Ÿ���� ��Ҵٴ� ǥ��
+        this.isTouchStartTile = true;
     }
 
     public void MonsterDestroy()

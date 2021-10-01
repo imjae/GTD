@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6600254358728215611}
   - component: {fileID: 6600254358728215588}
   - component: {fileID: 6600254358728215589}
-  - component: {fileID: 6600254358728215590}
   m_Layer: 5
   m_Name: BuildButton
   m_TagString: Untagged
@@ -122,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6600254358728215590}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OnClickBuild, Assembly-CSharp
         m_MethodName: MakeBuildButton
         m_Mode: 1
@@ -134,19 +133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6600254358728215590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6600254358728215584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ddaf63375202974f9fdb8d3177f1fba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildButton: {fileID: 214994757572077301, guid: 0d87ba08630e33d43a3816c95aad917a, type: 3}
 --- !u!1 &6600254359201876373
 GameObject:
   m_ObjectHideFlags: 0
