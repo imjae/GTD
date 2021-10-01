@@ -21,11 +21,11 @@ public class MonsterCollision : MonoBehaviour
         if (targetTag.Equals("Bullet"))
         {
             //healthSystem.TakeDamage(targetObject.GetComponent<Bullet>().damage);
-            healthSystem.TakeDamage(20);
+            healthSystem.TakeDamage(100);
         }
         else if (targetTag.Equals("Arrow"))
         {
-
+            healthSystem.TakeDamage(20);
         }
         else if (targetTag.Equals("Skill"))
         {

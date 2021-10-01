@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3755961005672597120}
   - component: {fileID: 1311288629028565262}
   - component: {fileID: 7320510448260063259}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: CanonShooter
-  m_TagString: Bullet
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 40
+  m_Radius: 30
   m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &6578204981578200062
 GameObject:
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 1029251957555295752}
   - component: {fileID: 5396176807483521814}
   - component: {fileID: 1214804729032817491}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: CanonSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}

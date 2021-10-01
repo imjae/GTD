@@ -15,10 +15,13 @@ public class Spawn : MonoBehaviour
 
     // 보스 소환 마법진
     public GameObject bossPortal;
+    public GameObject boss;
+
     private void Start()
     {
         system = GetComponent<ParticleSystem>();
     }
+
     void SpawnExploer()
     {
         Instantiate(SpawnExploerEffect, transform.position, Quaternion.identity);
@@ -49,5 +52,7 @@ public class Spawn : MonoBehaviour
 
         GameObject portal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
         portal.transform.SetParent(gameObject.transform);
+
+        GameObject boss = Instantiate(boss, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
     }
 }

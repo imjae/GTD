@@ -7,6 +7,10 @@ public class CameraManager : MonoBehaviour
     public Camera mainCamera;
     public Camera bossCamera;
 
+    private List<Camera> cameraList;
+    Vector3 initMainCameraPosition;
+    Vector3 initBossCameraPosition;
+
     // 카메라 흔들기
     public float shakeAmount;
     float shakeTime;
@@ -66,8 +70,16 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initMainCameraPosition = mainCamera.transform.position;
+        initBossCameraPosition = bossCamera.transform.position;
+
+
+        cameraList = new List<Camera>();
+
+        cameraList.Add(mainCamera);
+        cameraList.Add(bossCamera);
         MainCameraOn();
-        initialPosition = new Vector3(315.4f, 1160f, -995.8f);
+
     }
 
     // Update is called once per frame
@@ -75,13 +87,38 @@ public class CameraManager : MonoBehaviour
     {
         if(shakeTime > 0)
         {
-            transform.position = Random.insideUnitSphere * shakeAmount + initialPosition;
+            if (CurrentCamera().gameObject.tag.Equals("MainCamera")){
+                CurrentCamera().gameObject.transform.position = Random.insideUnitSphere * shakeAmount + initMainCameraPosition;
+            } else
+            {
+                CurrentCamera().gameObject.transform.position = Random.insideUnitSphere * shakeAmount + initBossCameraPosition;
+            }
+            
             shakeTime -= Time.deltaTime;
         }
         else
         {
             shakeTime = 0.0f;
-            transform.position = initialPosition;
+            if (CurrentCamera().gameObject.tag.Equals("MainCamera"))
+            {
+                CurrentCamera().gameObject.transform.position = initMainCameraPosition;
+            }
+            else
+            {
+                CurrentCamera().gameObject.transform.position = initBossCameraPosition;
         }
+        }
+    }
+
+    Camera CurrentCamera()
+    {
+        Camera result = mainCamera;
+
+        cameraList.ForEach(camera => {
+            if (camera.enabled)
+                result = camera;
+        });
+
+        return result;
     }
 }

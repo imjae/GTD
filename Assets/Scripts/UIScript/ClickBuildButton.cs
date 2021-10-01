@@ -19,4 +19,9 @@ public class ClickBuildButton : MonoBehaviour
         buttonGroup.SetActive(!buttonGroup.activeSelf);
         GameManager.Instance.isBuild = true;
     }
+    public void ShowSkillButton()
+    {
+        buttonUI.SetActive(!buttonUI.activeSelf);
+        buttonGroup.SetActive(!buttonGroup.activeSelf);
+    }
 }

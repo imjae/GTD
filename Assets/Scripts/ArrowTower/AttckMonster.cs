@@ -8,9 +8,12 @@ public class AttckMonster : MonoBehaviour
     public GameObject StartPoint;
     public float attackSpeed;
     bool isAttack = false;
+    AudioSource source;
+    public AudioClip[] clip;
+
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,11 +42,11 @@ public class AttckMonster : MonoBehaviour
     IEnumerator AttackMonster(GameObject target)
     {
         isAttack = true;
-        yield return new WaitForSeconds(0.1f);
         while (true)
         {
             if (!isAttack)
                 break;
+            source.PlayOneShot(clip[0]);
             var myArrow = Instantiate(arrow, StartPoint.transform.position, StartPoint.transform.rotation);
             StartPoint.transform.LookAt(target.transform.position);
             myArrow.GetComponent<Rigidbody>().AddForce(StartPoint.transform.forward * 2000);

@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         this.dangerText.SetActive(false);
     }
 
-    public void EmergenceBoss()
+    public void WarningEmergenceBoss()
     {
         StartCoroutine(BlinkText());
         CameraManager.Instance.VibrateForTime(8f);

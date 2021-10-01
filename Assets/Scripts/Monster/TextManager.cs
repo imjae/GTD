@@ -7,26 +7,26 @@ using TMPro;
 public class TextManager : MonoBehaviour
 {
     TextMeshProUGUI text;
-    string name;
+    string textName;
     
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        name = gameObject.name;
+        textName = gameObject.name;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(name.Equals("MonsterCount"))
+        if(textName.Equals("MonsterCount"))
         {
             text.text = $"Count : {GameManager.Instance.currentMonsterCount}";
         }
-        if(name.Equals("CurrentGold"))
+        if(textName.Equals("CurrentGold"))
         {
             text.text = $"Gold : {GameManager.Instance.currentGold}";
         }
-        if (name.Equals("PlayTime"))
+        if (textName.Equals("PlayTime"))
         {
             text.text = $"Time : {(int)GameManager.Instance.playTime}";
         }

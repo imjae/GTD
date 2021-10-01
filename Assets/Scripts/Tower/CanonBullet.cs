@@ -39,7 +39,7 @@ public class CanonBullet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Bullet"))
+        if (!other.gameObject.CompareTag("Bullet") && !other.gameObject.CompareTag("Tower"))
             StartCoroutine(CanonHit());
     }
 
