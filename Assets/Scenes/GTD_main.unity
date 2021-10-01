@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 067225847780c0b42b974e58128cc04e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4497105, g: 0.49977976, b: 0.5756375, a: 1}
+  m_IndirectSpecularColor: {r: 0.30856937, g: 0.27534616, b: 0.48051077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1027,6 +1027,8 @@ MonoBehaviour:
   currentMonsterCount: 0
   monsterGameoverCount: 100
   monsterRespawnTime: 8
+  isBuild: 0
+  isDestroy: 0
   dangerText: {fileID: 54370177}
 --- !u!4 &1365553021
 Transform:
@@ -1122,6 +1124,7 @@ MonoBehaviour:
   cannontower: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
   magetower: {fileID: 8112865385760117463, guid: 21a2b5c91b922f74a87029f77f38b118, type: 3}
   towernum: 1
+  grounds: []
 --- !u!1 &1680409295
 GameObject:
   m_ObjectHideFlags: 0

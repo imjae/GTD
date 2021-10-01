@@ -60,7 +60,6 @@ public class MonsterBehaviour : MonoBehaviour
             {
                 if (isFirstWayPoint)
                 {
-
                     transform.LookAt(currentMap.GetComponent<Level1Map>().wayPoint[0].transform);
                     isFirstWayPoint = false;
                 }
