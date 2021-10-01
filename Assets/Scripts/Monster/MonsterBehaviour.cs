@@ -12,14 +12,14 @@ public class MonsterBehaviour : MonoBehaviour
 
     private Animator animator;
 
-    // ¸ó½ºÅÍ°¡ »ı¼ºµÈ ¸Ê(ºÎ¸ğÀÇ ºÎ¸ğ°´Ã¼ °¡Á®¿À´Â ¹æ½ÄÀ¸·Î ±¸Çö)
+    // ëª¬ìŠ¤í„°ê°€ ìƒì„±ëœ ë§µ(ë¶€ëª¨ì˜ ë¶€ëª¨ê°ì²´ ê°€ì ¸ì˜¤ëŠ” ë°©ì‹ìœ¼ë¡œ êµ¬í˜„)
     private GameObject currentMap;
 
     bool isFirstPower = true;
     bool isTouchStartTile = false;
     bool isDie = false;
 
-    // Ã¹¹ø¤Š ¿şÀÌÆ÷ÀÎÆ® Âï°í³ª¼­ false·Î º¯°æµÇ¾î LookAt ¹«È¿È­ ½ÃÅ°´Â º¯¼ö
+    // ì²«ë²ˆÂŠ ì›¨ì´í¬ì¸íŠ¸ ì°ê³ ë‚˜ì„œ falseë¡œ ë³€ê²½ë˜ì–´ LookAt ë¬´íš¨í™” ì‹œí‚¤ëŠ” ë³€ìˆ˜
     bool isFirstWayPoint = true;
 
     private Rigidbody tmpRigidBody;
@@ -43,7 +43,7 @@ public class MonsterBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(healthSystem.hitPoint <= 0 && isDie == false)
+        if (healthSystem.hitPoint <= 0 && isDie == false)
         {
             isDie = true;
             animator.SetTrigger("DieTrigger");
@@ -54,9 +54,9 @@ public class MonsterBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isDie)
+        if (!isDie)
         {
-            if(isTouchStartTile)
+            if (isTouchStartTile)
             {
                 if (isFirstWayPoint)
                 {
@@ -67,7 +67,7 @@ public class MonsterBehaviour : MonoBehaviour
             }
             else
             {
-                if(isFirstPower)
+                if (isFirstPower)
                 {
                     Vector3 horizontalVector = new Vector3(-1f, 0.3f, Random.Range(-0.3f, 0.3f));
                     float power = Random.Range(20f, 23f);
@@ -77,13 +77,13 @@ public class MonsterBehaviour : MonoBehaviour
                 }
             }
         }
-            
+
     }
 
     void triggerTouchStartTile()
     {
         animator.SetTrigger("WalkTrigger");
-        // Ã³À½ ½ÃÀÛ Å¸ÀÏÀ» ¹â¾Ò´Ù´Â Ç¥½Ã
+        // ì²˜ìŒ ì‹œì‘ íƒ€ì¼ì„ ë°Ÿì•˜ë‹¤ëŠ” í‘œì‹œ
         this.isTouchStartTile = true;
     }
 

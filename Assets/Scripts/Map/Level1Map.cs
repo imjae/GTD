@@ -8,10 +8,10 @@ public class Level1Map : MonoBehaviour
 
     public GameObject parent;
 
-    // ½ºÆùÀÌÆåÆ® Æø¹ßÀ§ÇØ ¹Ş¾Æ¿È
+    // ìŠ¤í°ì´í™íŠ¸ í­ë°œìœ„í•´ ë°›ì•„ì˜´
     public GameObject SpawnEffect;
 
-    [SerializeField] 
+    [SerializeField]
     private SlimeMonsterFactory slimeFactory = null;
     [SerializeField]
     private SkeletonMonsterFactory skeletonFactory = null;
@@ -31,24 +31,24 @@ public class Level1Map : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private void CreateMonster()
     {
-        // ¸®½ºÆùµÈ ÀüÃ¼ ¸ó½ºÅÍ¼ö Áõ°¡
+        // ë¦¬ìŠ¤í°ëœ ì „ì²´ ëª¬ìŠ¤í„°ìˆ˜ ì¦ê°€
 
         if (GameManager.Instance.playTime <= 10f)
         {
             this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
-        } 
+        }
         else if (GameManager.Instance.playTime <= 20f)
         {
             CameraManager.Instance.BossCameraOn();
-            // º¸½º ÃâÇö °æ°í
+            // ë³´ìŠ¤ ì¶œí˜„ ê²½ê³ 
             GameManager.Instance.EmergenceBoss();
-            // Exploer ¾Ö´Ï¸ŞÀÌ¼Ç ¹ßµ¿ÈÄ Æø¹ß ½ºÅ©¸³Æ® ÀÌ¾îÁü (SpawnExploer)
+            // Exploer ì• ë‹ˆë©”ì´ì…˜ ë°œë™í›„ í­ë°œ ìŠ¤í¬ë¦½íŠ¸ ì´ì–´ì§ (SpawnExploer)
             SpawnEffect.GetComponent<Animator>().SetTrigger("ExploerTrigger");
 
 
@@ -67,10 +67,10 @@ public class Level1Map : MonoBehaviour
             this.golemFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         }
-        // µå·¡°ï º¸½º¸÷ ÃâÇö ¾Ö´Ï¸ŞÀÌ¼ÇÀ¸·Î º¯°æÇÒ ¿¹Á¤
-        else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
+        // ë“œë˜ê³¤ ë³´ìŠ¤ëª¹ ì¶œí˜„ ì• ë‹ˆë©”ì´ì…˜ìœ¼ë¡œ ë³€ê²½í•  ì˜ˆì •
+        else if (GameManager.Instance.playTime > 40f && GameManager.Instance.currentMonsterCount == 0)
         {
-            // º¸½º ÃâÇö °æ°í
+            // ë³´ìŠ¤ ì¶œí˜„ ê²½ê³ 
             GameManager.Instance.EmergenceBoss();
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// ½ºÅ³¹öÆ°À» ´­·¶À» ¶§ÀÇ µ¿ÀÛÀ» °üÀåÇÏ´Â ½ºÅ©¸³Æ®
+// ìŠ¤í‚¬ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œì˜ ë™ì‘ì„ ê´€ì¥í•˜ëŠ” ìŠ¤í¬ë¦½íŠ¸
 
 public class ButtonActor : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class ButtonActor : MonoBehaviour
 
     void UseSkill()
     {
-        Debug.Log(gameObject.name + " »ç¿ë");
+        Debug.Log(gameObject.name + " ì‚¬ìš©");
         leftTime = coolTime;
         button.enabled = false;
         transform.localScale /= 1.2f;
