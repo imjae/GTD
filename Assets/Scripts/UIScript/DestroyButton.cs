@@ -14,6 +14,7 @@ public class DestroyButton : MonoBehaviour
             ColorBlock cb = button.colors;
             Color newColor = Color.white;
             cb.normalColor = newColor;
+            cb.selectedColor = newColor;
             button.colors = cb;
             GameManager.Instance.isDestroy = false;
         }
