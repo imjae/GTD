@@ -26,7 +26,7 @@ public class Level1Map : MonoBehaviour
 
     void Start()
     {
-        //InvokeRepeating("CreateMonster", 1f, GameManager.Instance.monsterRespawnTime);
+        InvokeRepeating("CreateMonster", 1f, GameManager.Instance.monsterRespawnTime);
     }
 
     void Update()
