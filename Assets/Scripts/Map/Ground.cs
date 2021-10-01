@@ -17,7 +17,6 @@ public class Ground : MonoBehaviour
             transform.Translate(Vector3.up * -1f);
         }
     }
-
     private void OnMouseDown()
     {
         if (GameManager.Instance.isBuild)

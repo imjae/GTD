@@ -30,6 +30,8 @@ public class MonsterCollision : MonoBehaviour
         else if (targetTag.Equals("Skill"))
         {
             healthSystem.TakeDamage(targetObject.GetComponent<Skill>().damage);
+      
+        
         }
 
 
