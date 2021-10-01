@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// 스킬버튼을 눌렀을 때의 동작을 관장하는 스크립트
+
 public class ButtonActor : MonoBehaviour
 {
     Image image;
@@ -15,6 +17,7 @@ public class ButtonActor : MonoBehaviour
 
     void Start()
     {
+        image = GetComponent<Image>();
         button = GetComponent<Button>();
         coolTime = skill.GetComponent<Skill>().rate;
         button.onClick.AddListener(UseSkill);
@@ -22,7 +25,7 @@ public class ButtonActor : MonoBehaviour
 
     void UseSkill()
     {
-        Debug.Log(gameObject.name + " ���");
+        Debug.Log(gameObject.name + " 사용");
         leftTime = coolTime;
         button.enabled = false;
         transform.localScale /= 1.2f;
@@ -31,9 +34,10 @@ public class ButtonActor : MonoBehaviour
         StartCoroutine(CoolTime());
     }
 
-    void Update()
+    IEnumerator CoolTime()
     {
-        if (isClicked)
+        Debug.Log("Cooling");
+        while (true)
         {
             leftTime -= Time.deltaTime;
             fillRatio = 1f - (leftTime / coolTime);
@@ -42,32 +46,18 @@ public class ButtonActor : MonoBehaviour
 
             if (leftTime <= 0)
             {
-                leftTime -= Time.deltaTime * speed;
-                if (leftTime < 0)
-                {
-                    leftTime = 0;
-                    if (button)
-                        button.enabled = true;
-                    isClicked = true;
-                }
-                float ratio = 1f - (leftTime / coolTime);
-                if (image)
-                    image.fillAmount = ratio;
+                leftTime = 0;
+                Cooled();
+                yield break;
             }
         }
     }
 
-    public void StartCoolTime()
+    void Cooled()
     {
-        leftTime = coolTime;
-        isClicked = true;
-        if (button)
-            button.enabled = false;
+        Debug.Log("Cooled");
+        button.enabled = true;
+        transform.localScale *= 1.2f;
+        image.color = new Color(1f, 1f, 1f, 1f);
     }
-
-    //void ClickButton()
-    //{
-    //    Debug.Log(gameObject.name);
-    //    transform.localScale = new Vector3(0.9f, 0.9f, 1);
-    //}
 }

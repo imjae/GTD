@@ -44,7 +44,6 @@ public class Ground : MonoBehaviour
             }
         }
     }
-
     private void OnMouseExit()
     {
         if (GameManager.Instance.isBuild)

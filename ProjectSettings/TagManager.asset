@@ -15,11 +15,11 @@ TagManager:
   - Waypoint5
   - Load
   - TowerGround
+  - TriggerBox
+  - IceTriggerBox
   - Tower
   - DangerText
   - Skill
-  - TriggerBox
-  - IceTriggerBox
   layers:
   - Default
   - TransparentFX
