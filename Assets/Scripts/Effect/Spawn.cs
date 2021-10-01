@@ -50,9 +50,13 @@ public class Spawn : MonoBehaviour
 
         system.Stop();
 
-        GameObject portal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
-        portal.transform.SetParent(gameObject.transform);
+        GameObject clonePortal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
+        clonePortal.transform.SetParent(gameObject.transform);
 
-        GameObject boss = Instantiate(boss, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
+        GameObject cloneBoss = Instantiate(boss, new Vector3(-0.2f, -5.7f, 6.6f), Quaternion.Euler(27.96f, 181.351f, 1.874f));
+        cloneBoss.transform.SetParent(gameObject.transform);
+        cloneBoss.GetComponent<Animator>().SetTrigger("Attack02Trigger");
+        cloneBoss.transform.localPosition = new Vector3(-0.2f, -5.7f, 6.6f);
+        cloneBoss.transform.localRotation = Quaternion.Euler(27.96f, 181.351f, 1.874f);
     }
 }
