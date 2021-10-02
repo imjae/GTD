@@ -48,6 +48,7 @@ public class BossBehaviour : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(10f);
+            GameManager.Instance.RefreshBuiledTowerArr();
             GameObject[] currentBuildedTowerArr = GameManager.Instance.GetBuiledTowerArr();
             Debug.Log(currentBuildedTowerArr.Length);
             int randomAttackTowerCount = 0;
@@ -57,13 +58,10 @@ public class BossBehaviour : MonoBehaviour
                 randomAttackTowerCount = (int)Random.Range(1, (currentBuildedTowerArr.Length + 1) / 2);
                 selectedTowerIndexArr = GameManager.Instance.GetRandomInt(randomAttackTowerCount, 0, (currentBuildedTowerArr.Length - 1));
 
-                Debug.Log(selectedTowerIndexArr.Length + "개 공격!");
-
                 for(int i=0; i < selectedTowerIndexArr.Length; i++)
                 {
                     // 공격할 타워 랜덤 선책
                     Vector3 targetPosition = currentBuildedTowerArr[selectedTowerIndexArr[i]].transform.position;
-                    Debug.Log(targetPosition);
                     Instantiate(targetEffect, new Vector3(targetPosition.x, targetPosition.y + 5f, targetPosition.z), Quaternion.Euler(-90f, 0f, 0f));
                 }
             }

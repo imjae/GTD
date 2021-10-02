@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5108445201586104688}
   - component: {fileID: 2371802648723939820}
+  - component: {fileID: 5119031988493495524}
   m_Layer: 8
   m_Name: ArrowTower
   m_TagString: Tower
@@ -77,6 +78,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.5, y: 17.3, z: 8.2}
   m_Center: {x: 0, y: 8.4, z: 0}
+--- !u!114 &5119031988493495524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108445201586104691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482ff14c2b063ac469a7fb12b188df8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5108445201867928866
 GameObject:
   m_ObjectHideFlags: 0

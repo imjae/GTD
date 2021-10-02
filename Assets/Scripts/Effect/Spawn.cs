@@ -72,10 +72,10 @@ public class Spawn : MonoBehaviour
             yield return new WaitForSeconds(1.6f);
 
             clonePortal.GetComponent<Animator>().SetTrigger("CloseBossPortal");
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             cloneBoss.GetComponent<Animator>().SetTrigger("Attack02Trigger");
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(4.5f);
 
             // 불 끄고 나는 모션으로 변경
             cloneBoss.GetComponent<BossBehaviour>().fireBreath.SetActive(false);

@@ -9863,6 +9863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f08cc3dcf72ef4795b318d2ea2569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sparkEffect: {fileID: 1491359990764140, guid: 18c0a8b63ea8b4448a595b0c24c1384a, type: 3}
+  explosionEffect: {fileID: 1150934714579380, guid: 779aa8c25fbd0e1488637639c9fff976, type: 3}
 --- !u!1 &8857723137029727884
 GameObject:
   m_ObjectHideFlags: 0
