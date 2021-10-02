@@ -50,13 +50,39 @@ public class Spawn : MonoBehaviour
 
         system.Stop();
 
-        GameObject clonePortal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
-        clonePortal.transform.SetParent(gameObject.transform);
+        StartCoroutine(BossMovie());
+    }
 
-        GameObject cloneBoss = Instantiate(boss, new Vector3(-0.2f, -5.7f, 6.6f), Quaternion.Euler(27.96f, 181.351f, 1.874f));
-        cloneBoss.transform.SetParent(gameObject.transform);
-        cloneBoss.GetComponent<Animator>().SetTrigger("Attack02Trigger");
-        cloneBoss.transform.localPosition = new Vector3(-0.2f, -5.7f, 6.6f);
-        cloneBoss.transform.localRotation = Quaternion.Euler(27.96f, 181.351f, 1.874f);
+    public IEnumerator BossMovie()
+    {
+        bool isRoutain = true;
+        while (isRoutain)
+        {
+            // 한번만 반복하도록 변수 설정
+            isRoutain = false;
+
+            GameObject clonePortal = Instantiate(bossPortal, transform.position, Quaternion.Euler(-27.088f, 90.7f, -0.013f));
+            clonePortal.transform.SetParent(gameObject.transform);
+            yield return new WaitForSeconds(3f);
+
+            GameObject cloneBoss = Instantiate(boss, new Vector3(-0.2f, -5.7f, 6.6f), Quaternion.Euler(27.96f, 181.351f, 1.874f));
+            cloneBoss.transform.SetParent(gameObject.transform);
+            cloneBoss.transform.localPosition = new Vector3(-0.11f, -3.01f, 8.04f);
+            cloneBoss.transform.localRotation = Quaternion.Euler(27.96f, 181.351f, 1.874f);
+            yield return new WaitForSeconds(1.6f);
+
+            clonePortal.GetComponent<Animator>().SetTrigger("CloseBossPortal");
+            yield return new WaitForSeconds(2f);
+
+            cloneBoss.GetComponent<Animator>().SetTrigger("Attack02Trigger");
+            yield return new WaitForSeconds(5f);
+
+            // 불 끄고 나는 모션으로 변경
+            cloneBoss.GetComponent<BossBehaviour>().fireBreath.SetActive(false);
+            cloneBoss.GetComponent<Animator>().SetTrigger("FlyFWDTrigger");
+            yield return new WaitForSeconds(0.3f);
+
+            CameraManager.Instance.MainCameraOn();
+        }
     }
 }

@@ -4914,6 +4914,7 @@ GameObject:
   - component: {fileID: 8622582889748436802}
   - component: {fileID: 8901709431936474234}
   - component: {fileID: -5656358707546970097}
+  - component: {fileID: 3040803170769256159}
   m_Layer: 0
   m_Name: VortexPortalPurple
   m_TagString: Untagged
@@ -9790,3 +9791,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbed8c61ad44b84aacd2cd81c5328e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3040803170769256159
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366837230897353313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f992c4b57cdc7d748a4dd575887b9f1b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

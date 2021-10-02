@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playTime = Time.time;
+        playTime += Time.deltaTime;
     }
 
     void Update()

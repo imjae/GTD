@@ -350,14 +350,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.33317345
+      - time: 0.30138862
         functionName: ActiveBreath
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: bbcfe680df2ae29448378ea0e02ee531, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9306592
+      - time: 0.967334
         functionName: UnActiveBreath
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: bbcfe680df2ae29448378ea0e02ee531, type: 3}
