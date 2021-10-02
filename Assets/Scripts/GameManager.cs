@@ -25,7 +25,11 @@ public class GameManager : MonoBehaviour
 
     public bool isDestroy = false;
 
+    // 보스 출현 시에 표시될 텍스트
     public GameObject dangerText;
+    // 보스전 시작할때 지어져 있는 타워 배열(건물 건설, 파괴시 새로 초기화 해야함)
+    public GameObject[] buildedTowerArr;
+
 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
     private static GameManager _instance;
@@ -73,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     // 몬스터 생성 함수
@@ -98,14 +102,14 @@ public class GameManager : MonoBehaviour
         switch (difficury)
         {
             case 1:
-                    // 난이도 1일때 설정
-                    break;
+                // 난이도 1일때 설정
+                break;
             case 2:
-                    // 난이도 2일때 설정
-                    break;
+                // 난이도 2일때 설정
+                break;
             case 3:
-                    // 난이도 3일때 설정
-                    break;
+                // 난이도 3일때 설정
+                break;
             default:
                 Debug.Log($"난이도를 설정해 주세요");
                 break;
@@ -113,11 +117,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-   
+
     public IEnumerator BlinkText()
     {
         int count = 0;
-        while(count < 5)
+        while (count < 5)
         {
             this.dangerText.SetActive(false);
             yield return new WaitForSeconds(.5f);
@@ -132,5 +136,41 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(BlinkText());
         CameraManager.Instance.VibrateForTime(8f);
+    }
+
+    public void RefreshBuiledTowerArr()
+    {
+        this.buildedTowerArr = GameObject.FindGameObjectsWithTag("Tower");
+    }
+
+    public GameObject[] GetBuiledTowerArr()
+    {
+        return this.buildedTowerArr;
+    }
+
+    public int[] GetRandomInt(int length, int min, int max)
+    {
+        int[] randArray = new int[length];
+        bool isSame;
+
+        for(int i=0; i<length; i++)
+        {
+            while (true)
+            {
+                randArray[i] = Random.Range(min, max);
+                isSame = false;
+
+                for(int j=0; j<i; j++)
+                {
+                    if(randArray[j] == randArray[i])
+                    {
+                        isSame = true;
+                        break;
+                    }
+                }
+                if (!isSame) break;
+            }
+        }
+        return randArray;
     }
 }

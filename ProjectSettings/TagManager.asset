@@ -19,6 +19,8 @@ TagManager:
   - Tower
   - DangerText
   - Skill
+  - BossHealthBar
+  - MainCanvas
   layers:
   - Default
   - TransparentFX

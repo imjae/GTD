@@ -82,7 +82,10 @@ public class Spawn : MonoBehaviour
             cloneBoss.GetComponent<Animator>().SetTrigger("FlyFWDTrigger");
             yield return new WaitForSeconds(0.3f);
 
+
             CameraManager.Instance.MainCameraOn();
+            cloneBoss.GetComponent<BossBehaviour>().isFInishBossMovie = true;
+            cloneBoss.GetComponent<BossBehaviour>().ActiveBossHealthBar();
         }
     }
 }

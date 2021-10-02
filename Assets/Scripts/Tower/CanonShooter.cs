@@ -32,7 +32,6 @@ public class CanonShooter : MonoBehaviour
     {
         if (other.tag == "Monster")
         {
-            Debug.Log("Lock On");
             if (playTime % 1.5 == 0)
             {
                 target = other.gameObject.transform.position;

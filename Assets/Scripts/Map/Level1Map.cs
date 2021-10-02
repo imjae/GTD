@@ -38,7 +38,7 @@ public class Level1Map : MonoBehaviour
     {
         // 리스폰된 전체 몬스터수 증가
 
-        if (GameManager.Instance.playTime <= 5f)
+        if (GameManager.Instance.playTime <= 10f)
         {
             this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;

@@ -26,7 +26,6 @@ public class MouseManager : MonoBehaviour
             if(Physics.Raycast(ray, out hit))
             {
                 GameObject target = hit.transform.gameObject;
-                Debug.Log(GameManager.Instance.isDestroy);
                 if (GameManager.Instance.isDestroy)
                 {
                     if(target.tag == "Tower")

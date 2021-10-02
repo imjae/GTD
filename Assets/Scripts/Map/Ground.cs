@@ -27,7 +27,6 @@ public class Ground : MonoBehaviour
         if (GameManager.Instance.isBuild)
         {
             num = transform.parent.gameObject.GetComponent<groundTest>().towernum;
-            Debug.Log(num);
 
             if (num == 1)
             {
@@ -37,6 +36,7 @@ public class Ground : MonoBehaviour
                     GameObject arrowTower = Instantiate(tower, transform.position, Quaternion.identity);
                     arrowTower.transform.SetParent(GameObject.Find("Tower").transform.Find("ArrowTower"));
                     GameManager.Instance.currentGold -= arrowTowerPirce;
+                    GameManager.Instance.RefreshBuiledTowerArr();
                 }
             }
             else if (num == 2)
@@ -47,6 +47,7 @@ public class Ground : MonoBehaviour
                     GameObject cannonTower = Instantiate(tower, transform.position, Quaternion.identity);
                     cannonTower.transform.SetParent(GameObject.Find("Tower").transform.Find("CannonTower"));
                     GameManager.Instance.currentGold -= cannonTowerPirce;
+                    GameManager.Instance.RefreshBuiledTowerArr();
                 }
                
             }
@@ -58,6 +59,7 @@ public class Ground : MonoBehaviour
                     GameObject mageTower = Instantiate(tower, transform.position, Quaternion.identity);
                     mageTower.transform.SetParent(GameObject.Find("Tower").transform.Find("MageTower"));
                     GameManager.Instance.currentGold -= mageTowerPirce;
+                    GameManager.Instance.RefreshBuiledTowerArr();
                 }  
             }
         }

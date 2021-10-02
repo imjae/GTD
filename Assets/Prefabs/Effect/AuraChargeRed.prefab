@@ -4930,6 +4930,7 @@ GameObject:
   - component: {fileID: 8855737682578123398}
   - component: {fileID: 8658772142049694818}
   - component: {fileID: 8660261553700471150}
+  - component: {fileID: 4988460016990501196}
   m_Layer: 0
   m_Name: AuraChargeRed
   m_TagString: Untagged
@@ -4946,7 +4947,7 @@ Transform:
   m_GameObject: {fileID: 8857600343376236694}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 8855496155970023588}
   - {fileID: 8861926607709290972}
@@ -9850,6 +9851,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4988460016990501196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857600343376236694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f08cc3dcf72ef4795b318d2ea2569c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8857723137029727884
 GameObject:
   m_ObjectHideFlags: 0
