@@ -43,17 +43,12 @@ public class HealthSystem : MonoBehaviour
   	void Start()
 	{
 		float hp;
-		if (!gameObject.tag.Equals("BossHealthBar"))
-        {
-			realObject = transform.parent.parent.gameObject;
-			hp = realObject.GetComponent<Monster>().hp;
-		} else
-        {
-			// 보스의 경우 hp 5000 고정
-			hp = 5000;
-		}
-		
-		 
+
+		realObject = transform.parent.parent.gameObject;
+		hp = realObject.GetComponent<Monster>().hp;
+
+		Debug.Log("aaaaaaaaaa : " + hp);
+
 		this.hitPoint = hp;
 		this.maxHitPoint = hp;
 
@@ -130,7 +125,8 @@ public class HealthSystem : MonoBehaviour
 
 	public void TakeDamage(float Damage)
 	{
-		hitPoint -= Damage;
+		this.hitPoint -= Damage;
+		Debug.Log("남은 체력 : " + this.hitPoint);
 		if (hitPoint < 1)
 		{
 			hitPoint = 0;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class GameManager : MonoBehaviour
     // 보스전 시작할때 지어져 있는 타워 배열(건물 건설, 파괴시 새로 초기화 해야함)
     public GameObject[] buildedTowerArr;
 
-
+    // 게임오버 여부
+    public bool isGameover = false;
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
     private static GameManager _instance;
     // 인스턴스에 접근하기 위한 프로퍼티
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         // 아래의 함수를 사용하여 씬이 전환되더라도 선언되었던 인스턴스가 파괴되지 않는다.
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -77,7 +79,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        if(JudgmentGameover() && isGameover)
+        {
+            isGameover = false;
+            SceneManager.LoadScene("GTD_gameover");
+        }
     }
 
     // 몬스터 생성 함수
@@ -91,9 +97,15 @@ public class GameManager : MonoBehaviour
     {
         // 현재 몬스터 수가 기준 몬스터 수가 크거나 같蔓見 True(게임오버) 반환
         if (this.currentMonsterCount >= monsterGameoverCount)
+        {
+            isGameover = true;
             return true;
+        }
         else
+        {
+            isGameover = false;
             return false;
+        }
     }
 
     // 난이도 설정
@@ -173,4 +185,6 @@ public class GameManager : MonoBehaviour
         }
         return randArray;
     }
+
+
 }

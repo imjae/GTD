@@ -222,4 +222,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill: {fileID: 6089713609737517037, guid: 41e57ea83a5fe4748a2e768d3d38561e, type: 3}
-  target: {fileID: 349389955182332682, guid: ad29469b71af1ec469887c4172e1d21f, type: 3}
+  target: {fileID: 0}

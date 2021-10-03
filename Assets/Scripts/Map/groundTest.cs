@@ -7,7 +7,8 @@ public class groundTest : MonoBehaviour
 
     public GameObject arrowtower;
     public GameObject cannontower;
-    public GameObject magetower;
+    public GameObject iceTower;
+    public GameObject poisonTower;
     public int towernum=1;
     public Ground[] grounds;
 

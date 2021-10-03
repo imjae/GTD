@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBehaviour : MonoBehaviour
 {
@@ -31,10 +32,12 @@ public class BossBehaviour : MonoBehaviour
 
     private float bossSurviveTime = 0.0f;
 
+    private bool isClear = false;
     void Start()
     {
         fireBreath.SetActive(false);
-        bossHealthBar = GameObject.FindWithTag("MainCanvas").transform.Find("BossHealthBar").gameObject;
+        bossHealthBar = transform.Find("Canvas").Find("HealthBar").gameObject;
+
         StartCoroutine(AttackTower());
         StartCoroutine(MovePattern());
     }
@@ -43,6 +46,18 @@ public class BossBehaviour : MonoBehaviour
     void Update()
     {
         bossSurviveTime += Time.deltaTime;
+
+        if(bossHealthBar.GetComponent<HealthSystem>().hitPoint <= 0)
+        {
+            isClear = true;
+            // °ÔÀÓ ½Â¸®
+            if(isClear)
+            {
+                isClear = false;
+                SceneManager.LoadScene("GTD_clear");
+            }
+            
+        }
     }
 
     private void FixedUpdate()

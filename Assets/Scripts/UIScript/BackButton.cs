@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BackButton : MonoBehaviour
 {
-    public GameObject buttonUI;
-    public GameObject buttonGroup;
+    public GameObject uiButtonGroup;
+    public GameObject buildButtonGroup;
+    public GameObject skillButtonGroup;
 
     public void ShowBuildButton()
     {
-        buttonUI.SetActive(!buttonUI.activeSelf);
-        buttonGroup.SetActive(!buttonGroup.activeSelf);
+        uiButtonGroup.SetActive(true);
+        buildButtonGroup.SetActive(false);
+        skillButtonGroup.SetActive(false);
         GameManager.Instance.isBuild = false;
     }
 }

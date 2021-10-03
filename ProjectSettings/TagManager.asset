@@ -21,6 +21,10 @@ TagManager:
   - Skill
   - BossHealthBar
   - MainCanvas
+  - TriggerBox
+  - Enemy
+  - IceTower
+  - PoisonTower
   layers:
   - Default
   - TransparentFX

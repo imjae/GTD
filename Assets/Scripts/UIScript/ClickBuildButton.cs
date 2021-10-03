@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ClickBuildButton : MonoBehaviour
 {
-    public GameObject buttonGroup;
-    public GameObject buttonUI;
+    public GameObject buildButtonGroup;
+    public GameObject skillButtonGroup;
+    public GameObject uiButtonGroup;
     // Start is called before the first frame update
 
     private void Start()
@@ -13,15 +14,17 @@ public class ClickBuildButton : MonoBehaviour
         
     }
 
-    public void ShowButton()
+    public void ShowBuildButton()
     {
-        buttonUI.SetActive(!buttonUI.activeSelf);
-        buttonGroup.SetActive(!buttonGroup.activeSelf);
+        buildButtonGroup.SetActive(true);
+        skillButtonGroup.SetActive(false);
+        uiButtonGroup.SetActive(false);
         GameManager.Instance.isBuild = true;
     }
     public void ShowSkillButton()
     {
-        buttonUI.SetActive(!buttonUI.activeSelf);
-        buttonGroup.SetActive(!buttonGroup.activeSelf);
+        skillButtonGroup.SetActive(true);
+        buildButtonGroup.SetActive(false);
+        uiButtonGroup.SetActive(false);
     }
 }

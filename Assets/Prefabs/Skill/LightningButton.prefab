@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill: {fileID: 4375113542676269709, guid: 7ffbb8dc5babe2a40b813a1367636d5f, type: 3}
-  target: {fileID: 6245510356444427129, guid: 54f69f173b9935d4d815fddd11c5eddf, type: 3}
+  target: {fileID: 0}
 --- !u!1 &7797530998489177606
 GameObject:
   m_ObjectHideFlags: 0

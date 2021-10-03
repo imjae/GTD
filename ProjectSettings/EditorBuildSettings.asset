@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GTD_start.unity
+    guid: 00a720d3a04d2744fbb30bdeeac16efc
+  - enabled: 1
+    path: Assets/Scenes/GTD_main.unity
+    guid: 7c466b971f2cd684cbd0db0efc7fe936
+  - enabled: 1
+    path: Assets/Scenes/GTD_gameover.unity
+    guid: 1fee85955285b74488c89092d657b8be
+  - enabled: 1
+    path: Assets/Scenes/GTD_clear.unity
+    guid: 5c90f2541bd5f9f4389a1b0dacc25045
   m_configObjects: {}

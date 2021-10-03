@@ -31,26 +31,27 @@ public class WaypointBehaviour : MonoBehaviour
             if (distance < 0.2f)
             {
                 targetObject.GetComponent<Animator>().SetTrigger("RunTrigger");
-                if (currentName.Equals("Waypoint1"))
+                if (currentName.Equals("WayPoint1"))
                 {
+                    // Debug.Log("waypoint1 통과");
                     targetTransform.LookAt(wayPoint[1].transform);
                 }
-                else if (currentName.Equals("Waypoint2"))
+                else if (currentName.Equals("WayPoint2"))
                 {
                     // Debug.Log("waypoint2 통과");
                     targetTransform.LookAt(wayPoint[2].transform);
                 }
-                else if (currentName.Equals("Waypoint3"))
+                else if (currentName.Equals("WayPoint3"))
                 {
                     // Debug.Log("waypoint3 통과");
                     targetTransform.LookAt(wayPoint[3].transform);
                 }
-                else if (currentName.Equals("Waypoint4"))
+                else if (currentName.Equals("WayPoint4"))
                 {
                     // Debug.Log("waypoint4 통과");
                     targetTransform.LookAt(wayPoint[4].transform);
                 }
-                else if (currentName.Equals("Waypoint5"))
+                else if (currentName.Equals("WayPoint5"))
                 {
                     // Debug.Log("waypoint5 통과");
                     targetTransform.LookAt(wayPoint[1].transform);

@@ -13,14 +13,12 @@ public class Level1Map : MonoBehaviour
 
     [SerializeField] 
     private SlimeMonsterFactory slimeFactory = null;
-    //[SerializeField]
-    //private SkeletonMonsterFactory skeletonFactory = null;
-    //[SerializeField]
-    //private OrcMonsterFactory orcFactory = null;
-    //[SerializeField]
-    //private GolemMonsterFactory golemFactory = null;
-    //[SerializeField]
-    //private DragonMonsterFactory dragonFactory = null;
+    [SerializeField]
+    private SkeletonMonsterFactory skeletonFactory = null;
+    [SerializeField]
+    private OrcMonsterFactory orcFactory = null;
+    [SerializeField]
+    private GolemMonsterFactory golemFactory = null;
 
     public GameObject[] wayPoint;
 
@@ -38,14 +36,15 @@ public class Level1Map : MonoBehaviour
     {
         // 리스폰된 전체 몬스터수 증가
 
-        if (GameManager.Instance.playTime <= 10f)
+        if (GameManager.Instance.playTime <= 100f)
         {
-            this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            EmergenceBoss();
+            // this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
-            EmergenceBoss();
+            // EmergenceBoss();
 
 
 

@@ -43,7 +43,6 @@ public class CanonShooter : MonoBehaviour
 
     void CanonShoot()
     {
-        Debug.Log("Attack");
         audioSource.PlayOneShot(audioClip[0]);
         animator.Play("CanonTower", -1, 0f);
         particle.Play();
