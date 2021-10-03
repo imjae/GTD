@@ -35,23 +35,18 @@ public class Level1Map : MonoBehaviour
     private void CreateMonster()
     {
         // 리스폰된 전체 몬스터수 증가
-
-        if (GameManager.Instance.playTime <= 100f)
+        // EmergenceBoss();
+        if (GameManager.Instance.playTime <= 10f)
         {
-            EmergenceBoss();
-            // this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            this.slimeFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
         } 
         else if (GameManager.Instance.playTime <= 20f)
         {
-            // EmergenceBoss();
-
-
-
-            //this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
-            //GameManager.Instance.currentMonsterCount++;
+            this.skeletonFactory.Spawn(parent.transform, respawnPoint.localPosition);
+            GameManager.Instance.currentMonsterCount++;
         }
-        /*else if (GameManager.Instance.playTime <= 30f)
+        else if (GameManager.Instance.playTime <= 30f)
         {
             this.orcFactory.Spawn(parent.transform, respawnPoint.localPosition);
             GameManager.Instance.currentMonsterCount++;
@@ -64,13 +59,8 @@ public class Level1Map : MonoBehaviour
         // 드래곤 보스몹 출현 애니메이션으로 변경할 예정
         else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
         {
-            // 보스 출현 경고
-            GameManager.Instance.EmergenceBoss();
-
-
-            this.dragonFactory.Spawn(parent.transform, respawnPoint.localPosition);
-            GameManager.Instance.currentMonsterCount++;
-        }*/
+            EmergenceBoss();
+        }
     }
 
     void EmergenceBoss()
