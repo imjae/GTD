@@ -889,6 +889,10 @@ MonoBehaviour:
   fireBreath: {fileID: 5973599492755409745}
   isFInishBossMovie: 0
   targetEffect: {fileID: 8857600343376236694, guid: 3ed1c09a9739ed344a29dd3b0b61f87a, type: 3}
+  bossWaypoint1: {fileID: 5873084812790171144, guid: 3729de2aa7c8bb648b271f554b58c9ea, type: 3}
+  bossWaypoint2: {fileID: 3353491144490655084, guid: 840c2bcbc1cf065448c961e852edfa48, type: 3}
+  bossWaypoint3: {fileID: 102902910735295877, guid: de33a1829a5ac6149beab1dfe15fa8ad, type: 3}
+  bossWaypoint4: {fileID: 4033000986160386837, guid: 95bcee2483dd31e469e60db01c60972c, type: 3}
 --- !u!1 &1610864841334552
 GameObject:
   m_ObjectHideFlags: 0
