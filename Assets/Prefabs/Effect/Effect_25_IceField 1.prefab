@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928030092538474427}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceField 1
   m_TagString: IceTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1928030092538474427
 Transform:
@@ -48,12 +48,12 @@ GameObject:
   - component: {fileID: 8965239870389429628}
   - component: {fileID: 8965239870389429629}
   - component: {fileID: 8965239870389429630}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceFieldDecal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239870389429626
 Transform:
@@ -159,12 +159,12 @@ GameObject:
   - component: {fileID: 8965239870773162219}
   - component: {fileID: 8965239870773162220}
   - component: {fileID: 8965239870773162221}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239870773162219
 Transform:
@@ -5034,12 +5034,12 @@ GameObject:
   - component: {fileID: 8965239870925825063}
   - component: {fileID: 8965239870925825064}
   - component: {fileID: 8965239870925825065}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceSmoke_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239870925825063
 Transform:
@@ -9908,12 +9908,12 @@ GameObject:
   - component: {fileID: 8965239871810414716}
   - component: {fileID: 8965239871810414717}
   - component: {fileID: 8965239871810414718}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239871810414716
 Transform:
@@ -14782,12 +14782,12 @@ GameObject:
   - component: {fileID: 8965239872013396426}
   - component: {fileID: 8965239872013396427}
   - component: {fileID: 8965239872013396428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239872013396426
 Transform:
@@ -19656,12 +19656,12 @@ GameObject:
   - component: {fileID: 8965239872026749209}
   - component: {fileID: 8965239872026749211}
   - component: {fileID: 8965239872026749210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_25_IceParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8965239872026749209
 Transform:

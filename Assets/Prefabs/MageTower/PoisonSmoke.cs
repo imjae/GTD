@@ -9,6 +9,8 @@ public class PoisonSmoke: MonoBehaviour
     public GameObject poisonEffect;
     ParticleSystem[] poisonParticleArr = new ParticleSystem[3];
 
+    public GameObject parent;
+
     // 생성된 이펙트 담는 변수
     GameObject poison;
     // 범위 안에 몬스터 있을때 true
@@ -16,6 +18,8 @@ public class PoisonSmoke: MonoBehaviour
     void Start()
     {
         poison = Instantiate(poisonEffect, startPoint.transform.position, startPoint.transform.rotation);
+        poison.transform.SetParent(parent.transform);
+        
         for (int i = 0; i < poisonParticleArr.Length; i++)
         {
             poisonParticleArr[i] = poison.transform.GetChild(i).gameObject.GetComponent<ParticleSystem>();

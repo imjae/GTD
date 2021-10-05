@@ -9,6 +9,8 @@ public class FreezingField : MonoBehaviour
     public GameObject freezeEffect;
     ParticleSystem[] freezeParticleArr = new ParticleSystem[4];
 
+    public GameObject parent;
+
     // 생성된 이펙트 담는 변수
     GameObject freeze;
     // 범위 안에 몬스터 있을때 true
@@ -16,6 +18,7 @@ public class FreezingField : MonoBehaviour
     void Start()
     {
         freeze = Instantiate(freezeEffect, startPoint.transform.position, startPoint.transform.rotation);
+        freeze.transform.SetParent(parent.transform);
         int idx = 1;
         for(int i=0; i< freezeParticleArr.Length; i++ )
         {

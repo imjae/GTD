@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 3999052947981298271}
   poisonEffect: {fileID: 8100751516763994463, guid: eec181663a9cea3449541e4f9b16165e, type: 3}
+  parent: {fileID: 7764195780471457678}
 --- !u!135 &6481144994247527931
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ GameObject:
   - component: {fileID: 3980200037684353812}
   - component: {fileID: 2955027402301407239}
   m_Layer: 0
-  m_Name: 'PoisonSmokeTower '
+  m_Name: PoisonSmokeTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

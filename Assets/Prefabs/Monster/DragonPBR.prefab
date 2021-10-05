@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  hp: 5000
+  hp: 3000
   damage: 10
   dropGold: 500
   moveSpeed: 0.2

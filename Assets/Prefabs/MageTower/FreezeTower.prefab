@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1801261724128031190}
   freezeEffect: {fileID: 2069352338822879331, guid: eb4e4c6d71b13fe4a9acdea92a5d82ee, type: 3}
+  parent: {fileID: 1799648707265582915}
 --- !u!135 &1585670807820394117
 SphereCollider:
   m_ObjectHideFlags: 0

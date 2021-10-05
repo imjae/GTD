@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 268257542416020065}
   - component: {fileID: 4349560068377570139}
   - component: {fileID: 2304159222819862718}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_46_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 6865653949865896826}
   - component: {fileID: 6609077975492465306}
   - component: {fileID: 2066103499974375099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_46_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9760,7 +9760,7 @@ GameObject:
   - component: {fileID: 3701182775731907682}
   - component: {fileID: 4218283652237471841}
   - component: {fileID: 505740261721347304}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_46_Smoke_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14634,7 +14634,7 @@ GameObject:
   - component: {fileID: 7777697252301947289}
   - component: {fileID: 4521938155406103557}
   - component: {fileID: 6723002581430469763}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_46_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19506,7 +19506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3862963592453976198}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Effect_46_PoisonSmoke 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
