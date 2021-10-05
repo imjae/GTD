@@ -5,22 +5,26 @@ using UnityEngine;
 public class ArrowCollider : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float DestroyTime = 0.5f;
+
     void Start()
     {
-        
+        Destroy(gameObject, DestroyTime);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Monster")
-            Destroy(this.gameObject);
-        else if(other.tag == "TowerGround")
-            Destroy(this.gameObject);
-
+        if (other.CompareTag("Monster"))
+            Destroy(gameObject);
+        else if (other.CompareTag("TowerGround"))
+            Destroy(gameObject);
+        else
+            Destroy(gameObject, DestroyTime);
     }
 }

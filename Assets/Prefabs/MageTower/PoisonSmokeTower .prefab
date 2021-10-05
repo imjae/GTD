@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3c51bfecb5cff45977e1cfc28d149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPoint: {fileID: 3999052947981298271}
-  PoisonEffect: {fileID: 8100751516763994463, guid: eec181663a9cea3449541e4f9b16165e, type: 3}
+  startPoint: {fileID: 3999052947981298271}
+  poisonEffect: {fileID: 8100751516763994463, guid: eec181663a9cea3449541e4f9b16165e, type: 3}
 --- !u!135 &6481144994247527931
 SphereCollider:
   m_ObjectHideFlags: 0

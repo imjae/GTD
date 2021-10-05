@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         if(JudgmentGameover() && isGameover)
         {
             isGameover = false;
-            SceneManager.LoadScene("GTD_gameover");
+            SceneManager.LoadScene("GameOver_Count");
         }
     }
 

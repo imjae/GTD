@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9df4081cf78a74da1f1b2e6333a5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPoint: {fileID: 1801261724128031190}
-  FreezeEffect: {fileID: 2069352338822879331, guid: eb4e4c6d71b13fe4a9acdea92a5d82ee, type: 3}
+  startPoint: {fileID: 1801261724128031190}
+  freezeEffect: {fileID: 2069352338822879331, guid: eb4e4c6d71b13fe4a9acdea92a5d82ee, type: 3}
 --- !u!135 &1585670807820394117
 SphereCollider:
   m_ObjectHideFlags: 0

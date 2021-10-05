@@ -19,11 +19,11 @@ public class AttckMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Monster")
+        if (other.CompareTag("Monster"))
         {
             if (!isAttack)
                 StartCoroutine(AttackMonster(other.gameObject));
@@ -32,12 +32,6 @@ public class AttckMonster : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         isAttack = false;
-    }
-    void Attack()
-    {
-        var myArrow = Instantiate(arrow, StartPoint.transform.position, StartPoint.transform.rotation);
-        //StartPoint.transform.LookAt(target.transform.position);
-        myArrow.GetComponent<Rigidbody>().AddForce(StartPoint.transform.forward * 1000);
     }
     IEnumerator AttackMonster(GameObject target)
     {

@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  hp: 1000
+  hp: 5000
   damage: 10
   dropGold: 500
   moveSpeed: 0.2
@@ -1689,15 +1689,15 @@ RectTransform:
   m_GameObject: {fileID: 3891580304283489238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7724532335138383043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -550, y: -80}
-  m_SizeDelta: {x: 1392, y: 40}
+  m_AnchoredPosition: {x: -500, y: -80}
+  m_SizeDelta: {x: 1000, y: 40}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &9176540626788242634
 CanvasRenderer:
@@ -1706,7 +1706,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3891580304283489238}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &9198265630689282692
 MonoBehaviour:
   m_ObjectHideFlags: 0

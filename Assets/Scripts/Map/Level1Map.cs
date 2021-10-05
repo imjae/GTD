@@ -57,7 +57,7 @@ public class Level1Map : MonoBehaviour
             GameManager.Instance.currentMonsterCount++;
         }
         // 드래곤 보스몹 출현 애니메이션으로 변경할 예정
-        else if(GameManager.Instance.playTime >40f && GameManager.Instance.currentMonsterCount == 0)
+        else if(GameManager.Instance.playTime >= 50f && GameManager.Instance.currentMonsterCount == 0)
         {
             EmergenceBoss();
         }

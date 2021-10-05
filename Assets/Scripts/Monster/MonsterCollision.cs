@@ -22,6 +22,7 @@ public class MonsterCollision : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    private bool isPoison = false;
     private void OnTriggerEnter(Collider other)
     {
         GameObject targetObject = other.gameObject;
@@ -49,6 +50,7 @@ public class MonsterCollision : MonoBehaviour
         }
         if(targetTag.Equals("PoisonTower"))
         {
+            isPoison = true;
             StartCoroutine(DotDamage());
         }
     }
@@ -64,6 +66,8 @@ public class MonsterCollision : MonoBehaviour
         }
         if (targetTag.Equals("PoisonTower"))
         {
+            isPoison = false;
+            Debug.Log("포이느타워 탈출!");
             StopCoroutine(DotDamage());
         }
     }
@@ -71,6 +75,8 @@ public class MonsterCollision : MonoBehaviour
     {
         while (true)
         {
+            if (!isPoison)
+                break;
             yield return new WaitForSeconds(1.5f);
             healthSystem.TakeDamage(20);
         }

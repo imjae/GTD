@@ -5,32 +5,98 @@ using UnityEngine;
 public class FreezingField : MonoBehaviour
 {
 
-    public GameObject StartPoint;
-    public GameObject FreezeEffect;
-    bool isAttack = false;
+    public GameObject startPoint;
+    public GameObject freezeEffect;
+    ParticleSystem[] freezeParticleArr = new ParticleSystem[4];
+
+    // 생성된 이펙트 담는 변수
+    GameObject freeze;
+    // 범위 안에 몬스터 있을때 true
+    bool isTargeting = false;
     void Start()
     {
+        freeze = Instantiate(freezeEffect, startPoint.transform.position, startPoint.transform.rotation);
+        int idx = 1;
+        for(int i=0; i< freezeParticleArr.Length; i++ )
+        {
+            freezeParticleArr[i] = freeze.transform.GetChild(idx++).gameObject.GetComponent<ParticleSystem>();
+            freezeParticleArr[i].Stop();
+        }
+        freeze.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    bool isOnFirst = true;
+    bool isOffFirst = true;
+    private void FixedUpdate()
     {
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Monster")
+        IceEffcetOn(transform.position, 16f);
+        if (isTargeting && isOnFirst)
         {
-            if (!isAttack)
-                StartCoroutine(AttackMonster());
+            isOnFirst = false;
+            isOffFirst = true;
+            IceParticleOn();
+        }
+        else if (!isTargeting && isOffFirst)
+        {
+            isOffFirst = false;
+            isOnFirst = true;
+            IceParticleOff();
         }
     }
-    private void OnTriggerExit(Collider other)
+
+    void IceParticleOn()
+    {
+        foreach (ParticleSystem ps in freezeParticleArr)
+        {
+            ps.Play();
+        }
+    }
+
+    void IceParticleOff()
+    {
+        foreach (ParticleSystem ps in freezeParticleArr)
+        {
+            ps.Stop();
+        }
+    }
+
+    void IceEffcetOn(Vector3 center, float radius)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        int monsterCount = 0;
+
+
+        foreach(Collider col in hitColliders)
+        {
+            if (col.CompareTag("Monster"))
+                monsterCount++;
+        }
+
+        if (monsterCount > 0)
+        {
+            isTargeting = true;
+        } else
+        {
+            isTargeting = false;
+        }
+    }
+
+
+    /*  private void OnTriggerEnter(Collider other)
+      {
+          if (other.tag == "Monster")
+          {
+              if (!isAttack)
+                  StartCoroutine(AttackMonster());
+          }
+      }*/
+    /*private void OnTriggerExit(Collider other)
     {
         isAttack = false;
 
-    }
+    }*/
 
-    IEnumerator AttackMonster()
+    /*IEnumerator AttackMonster()
     {
         isAttack = true;
         yield return new WaitForSeconds(0.2f);
@@ -40,9 +106,10 @@ public class FreezingField : MonoBehaviour
             {
                 break;
             }
-            var freeze = Instantiate(FreezeEffect, StartPoint.transform.position, StartPoint.transform.rotation);
+            freeze = Instantiate(freezeEffect, startPoint.transform.position, startPoint.transform.rotation);
             yield return new WaitForSeconds(3f);
             Destroy(freeze.gameObject);
         }
     }
+*/
 }
