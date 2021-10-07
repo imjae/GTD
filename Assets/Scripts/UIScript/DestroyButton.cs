@@ -12,21 +12,11 @@ public class DestroyButton : MonoBehaviour
         if (GameManager.Instance.isDestroy == true)
         {
             GetComponent<Image>().color = Color.white;
-            /*ColorBlock cb = button.colors;
-            Color newColor = Color.white;
-            cb.normalColor = newColor;
-            cb.selectedColor = newColor;
-            button.colors = cb;*/
             GameManager.Instance.isDestroy = false;
         }
         else
         {
             GetComponent<Image>().color = Color.red;
-            /*Color color = ;
-            ColorBlock cb = button.colors;
-            Color newColor = Color.red;
-            cb.normalColor = newColor;
-            button.colors = cb;*/
             GameManager.Instance.isDestroy = true;
         }
     }

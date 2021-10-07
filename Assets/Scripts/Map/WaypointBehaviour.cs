@@ -31,6 +31,7 @@ public class WaypointBehaviour : MonoBehaviour
             if (distance < 0.2f)
             {
                 targetObject.GetComponent<Animator>().SetTrigger("RunTrigger");
+               
                 if (currentName.Equals("WayPoint1"))
                 {
                     // Debug.Log("waypoint1 Ελ°ϊ");

@@ -9,11 +9,6 @@ public class ClickBuildButton : MonoBehaviour
     public GameObject uiButtonGroup;
     // Start is called before the first frame update
 
-    private void Start()
-    {
-        
-    }
-
     public void ShowBuildButton()
     {
         buildButtonGroup.SetActive(true);

@@ -30,10 +30,10 @@ public class MonsterCollision : MonoBehaviour
 
         // targetMoveSpeed = targetObject.transform.parent.gameObject.GetComponent<Monster>().moveSpeed;
 
+
         if (targetTag.Equals("Bullet"))
         {
             //healthSystem.TakeDamage(targetObject.GetComponent<Bullet>().damage);
-            Debug.Log("ÃÑ¾Ë °í¿ª!");
             healthSystem.TakeDamage(100f);
         }
         if (targetTag.Equals("Arrow"))

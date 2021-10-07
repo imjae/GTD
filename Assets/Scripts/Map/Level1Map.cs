@@ -11,6 +11,7 @@ public class Level1Map : MonoBehaviour
     // 스폰이펙트 폭발위해 받아옴
     public GameObject SpawnEffect;
 
+    // TODO MonsterFactory 하나로 동작시킬수 있음. 추후 수정
     [SerializeField] 
     private SlimeMonsterFactory slimeFactory = null;
     [SerializeField]
@@ -25,11 +26,6 @@ public class Level1Map : MonoBehaviour
     void Start()
     {
         InvokeRepeating("CreateMonster", 1f, GameManager.Instance.monsterRespawnTime);
-    }
-
-    void Update()
-    {
-
     }
 
     private void CreateMonster()

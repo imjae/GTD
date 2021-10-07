@@ -24,7 +24,5 @@ public class ArrowCollider : MonoBehaviour
             Destroy(gameObject);
         else if (other.CompareTag("TowerGround"))
             Destroy(gameObject);
-        else
-            Destroy(gameObject, DestroyTime);
     }
 }

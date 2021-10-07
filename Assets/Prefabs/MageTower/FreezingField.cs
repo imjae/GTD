@@ -7,7 +7,7 @@ public class FreezingField : MonoBehaviour
 
     public GameObject startPoint;
     public GameObject freezeEffect;
-    ParticleSystem[] freezeParticleArr = new ParticleSystem[4];
+    ParticleSystem[] freezeParticleArr;
 
     public GameObject parent;
 
@@ -17,6 +17,7 @@ public class FreezingField : MonoBehaviour
     bool isTargeting = false;
     void Start()
     {
+        freezeParticleArr = new ParticleSystem[4];
         freeze = Instantiate(freezeEffect, startPoint.transform.position, startPoint.transform.rotation);
         freeze.transform.SetParent(parent.transform);
         int idx = 1;

@@ -9,10 +9,14 @@ public class MouseManager : MonoBehaviour
     private ParticleSystem spawnPaticle;
 
     private GameObject select;
+    GameObject target;
+
+    Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
+        offset = new Vector3(0, 1.5f, 0);
         select = Instantiate(TowerSpwanEffect);
     }
 
@@ -25,7 +29,7 @@ public class MouseManager : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
-                GameObject target = hit.transform.gameObject;
+                target = hit.transform.gameObject;
                 if (GameManager.Instance.isDestroy)
                 {
                     if(target.tag == "Tower")
@@ -36,7 +40,7 @@ public class MouseManager : MonoBehaviour
                 else if(target.tag == "TowerGround")
                 {
                     Transform targetTransform = target.transform;
-                    select.transform.position = new Vector3(targetTransform.position.x, targetTransform.position.y + 1.5f, targetTransform.position.z);
+                    select.transform.position = select.transform.position + offset;
                 }
             }
         }

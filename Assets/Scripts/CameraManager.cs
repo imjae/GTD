@@ -17,6 +17,7 @@ public class CameraManager : MonoBehaviour
 
     Vector3 initialPosition;
 
+ 
     // 싱글톤 패턴을 사용하기 위한 인스턴스 변수
     private static CameraManager _instance;
     // 인스턴스에 접근하기 위한 프로퍼티
@@ -73,7 +74,7 @@ public class CameraManager : MonoBehaviour
         initMainCameraPosition = mainCamera.transform.position;
         initBossCameraPosition = bossCamera.transform.position;
 
-
+        // TODO 기존에 배열로 안받고 짜여진 로직 때문에 일단 Start에 카메라 배열 생성 추후수정
         cameraList = new List<Camera>();
 
         cameraList.Add(mainCamera);
@@ -88,6 +89,7 @@ public class CameraManager : MonoBehaviour
         if(shakeTime > 0)
         {
             if (CurrentCamera().gameObject.tag.Equals("MainCamera")){
+                // insideUnitSphere : 구 범위 안의 랜덤 백터 가져온다고 생각 (반지름이 1.0이라고 나와있는것보니 방향벡터로 사용 가능해보임)
                 CurrentCamera().gameObject.transform.position = Random.insideUnitSphere * shakeAmount + initMainCameraPosition;
             } else
             {

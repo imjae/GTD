@@ -41,7 +41,7 @@ public class AttckMonster : MonoBehaviour
             if (!isAttack)
                 break;
             source.PlayOneShot(clip[0]);
-            var myArrow = Instantiate(arrow, StartPoint.transform.position, StartPoint.transform.rotation);
+            GameObject myArrow = Instantiate(arrow, StartPoint.transform.position, StartPoint.transform.rotation);
             StartPoint.transform.LookAt(target.transform.position);
             myArrow.GetComponent<Rigidbody>().AddForce(StartPoint.transform.forward * 2000);
             yield return new WaitForSeconds(attackSpeed);

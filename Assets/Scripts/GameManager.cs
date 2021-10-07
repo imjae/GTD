@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     // 타워 건설 시점
     public bool isBuild = false;
 
-    public bool isDestroy = false;
+    // 타워 파괴 시점
+    public bool isDestroy;
 
     // 보스 출현 시에 표시될 텍스트
     public GameObject dangerText;
@@ -79,7 +80,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(JudgmentGameover() && isGameover)
+        // TODO LoadScene 함수를  JudgmentGameover() 함수의 불 값으로만 판단하면 계속 불러진다.
+        // JudgmentGameover()가 남은 몬스터 수로 게임오버를 판단하는데, Update() 로직 내에서 해당 함수를 불러오게 되어 LoadScene이 여러번 호출되어 동작이 이상해짐.
+        // 이런 로직이 자주발생. 좋은 해결 방법을 찾아야 함.
+        if (JudgmentGameover() && isGameover)
         {
             isGameover = false;
             SceneManager.LoadScene("GameOver_Count");
@@ -95,17 +99,11 @@ public class GameManager : MonoBehaviour
     // 게임오버 판단 함수
     public bool JudgmentGameover()
     {
-        // 현재 몬스터 수가 기준 몬스터 수가 크거나 같蔓見 True(게임오버) 반환
-        if (this.currentMonsterCount >= monsterGameoverCount)
-        {
-            isGameover = true;
-            return true;
-        }
-        else
-        {
-            isGameover = false;
-            return false;
-        }
+        // 현재 몬스터 수가 기준 몬스터 수가 크거나 같 True(게임오버) 반환
+        if (this.currentMonsterCount >= monsterGameoverCount) isGameover = true;
+        else isGameover = false;
+        
+        return isGameover;
     }
 
     // 난이도 설정
@@ -135,9 +133,7 @@ public class GameManager : MonoBehaviour
         int count = 0;
         while (count < 5)
         {
-            this.dangerText.SetActive(false);
-            yield return new WaitForSeconds(.5f);
-            this.dangerText.SetActive(true);
+            this.dangerText.SetActive(!dangerText.activeSelf);
             yield return new WaitForSeconds(.5f);
             count++;
         }
@@ -146,7 +142,9 @@ public class GameManager : MonoBehaviour
 
     public void WarningEmergenceBoss()
     {
+        // Danger 텍스트 깜빡임
         StartCoroutine(BlinkText());
+        // 8초간 현재 카메라 흔들기
         CameraManager.Instance.VibrateForTime(8f);
     }
 
@@ -160,6 +158,7 @@ public class GameManager : MonoBehaviour
         return this.buildedTowerArr;
     }
 
+    // 
     public int[] GetRandomInt(int length, int min, int max)
     {
         int[] randArray = new int[length];
